@@ -9,7 +9,7 @@ export default StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         backgroundColor: 'blue',
-        
+        zIndex:1,
     },
     menu: {
         backgroundColor: 'green',
@@ -20,6 +20,7 @@ export default StyleSheet.create({
         paddingHorizontal: 10,
         zIndex: 1,
         justifyContent: 'center',
+        
     },
     menuButton: {
         paddingHorizontal: 10,
