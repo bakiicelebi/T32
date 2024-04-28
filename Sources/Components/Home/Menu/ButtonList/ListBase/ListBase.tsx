@@ -40,7 +40,7 @@ const Example = () => {
     const renderItems = ({ item }: any) => <MenuList item={item} />
 
     return (
-        <Box>
+        <Box zIndex={-1} bg={"red.400"}>
             <FlatList numColumns={2} data={data} renderItem={renderItems} keyExtractor={item => item.id} />
         </Box>
     );

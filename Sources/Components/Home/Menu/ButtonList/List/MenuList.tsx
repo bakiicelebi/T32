@@ -40,14 +40,14 @@ const MenuList = (props: any) => {
                 {({
                     isPressed
                 }) => {
-                    return <Box m={2} w={size.width/10} h={size.height/6}  alignItems={"center"} maxW="96" bg={isPressed ? 'coolGray.200' : 'coolGray.100'} p="5" rounded="15" style={{
+                    return <Box m={2} w={size.width / 17} h={size.height / 9} alignItems={"center"} maxW="100" opacity={isPressed ? .9 : 1} p="5" rounded="15" style={{
                         transform: [{
                             scale: isPressed ? 0.96 : 1
                         }]
                     }}>
-                        <Image source={{ uri: item.url }} alt={item.title} size="md" />
-                        <Box p={2}>
-                            <Text>
+                        <Image maxW={size.width / 20} maxH={size.height / 15} resizeMode='cover' source={{ uri: item.url }} alt={item.title} size="md" />
+                        <Box  >
+                            <Text size={"md"} fontWeight={"400"} textAlign={"center"} flex={1}>
                                 {item.title}
                             </Text>
                         </Box>
