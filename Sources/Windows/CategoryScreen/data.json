@@ -1,0 +1,762 @@
+[
+    {
+        "id": "1",
+        "name": "Kategori 1",
+        "products": [
+            {
+                "id": "1",
+                "name": "Ürün 1",
+                "price": 10,
+                "description": "Ürün 1 Açıklama",
+                "image": "https://example.com/product1.jpg"
+            },
+            {
+                "id": "2",
+                "name": "Ürün 2",
+                "price": 20,
+                "description": "Ürün 2 Açıklama",
+                "image": "https://example.com/product2.jpg"
+            },
+            {
+                "id": "3",
+                "name": "Ürün 3",
+                "price": 15,
+                "description": "Ürün 3 Açıklama",
+                "image": "https://example.com/product3.jpg"
+            },
+            {
+                "id": "4",
+                "name": "Ürün 4",
+                "price": 25,
+                "description": "Ürün 4 Açıklama",
+                "image": "https://example.com/product4.jpg"
+            },
+            {
+                "id": "5",
+                "name": "Ürün 5",
+                "price": 12,
+                "description": "Ürün 5 Açıklama",
+                "image": "https://example.com/product5.jpg"
+            },
+            {
+                "id": "6",
+                "name": "Ürün 6",
+                "price": 18,
+                "description": "Ürün 6 Açıklama",
+                "image": "https://example.com/product6.jpg"
+            },
+            {
+                "id": "7",
+                "name": "Ürün 7",
+                "price": 30,
+                "description": "Ürün 7 Açıklama",
+                "image": "https://example.com/product7.jpg"
+            },
+            {
+                "id": "8",
+                "name": "Ürün 8",
+                "price": 22,
+                "description": "Ürün 8 Açıklama",
+                "image": "https://example.com/product8.jpg"
+            },
+            {
+                "id": "9",
+                "name": "Ürün 9",
+                "price": 28,
+                "description": "Ürün 9 Açıklama",
+                "image": "https://example.com/product9.jpg"
+            },
+            {
+                "id": "10",
+                "name": "Ürün 10",
+                "price": 32,
+                "description": "Ürün 10 Açıklama",
+                "image": "https://example.com/product10.jpg"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Kategori 2",
+        "products": [
+            {
+                "id": "11",
+                "name": "Ürün 11",
+                "price": 10,
+                "description": "Ürün 11 Açıklama",
+                "image": "https://example.com/product11.jpg"
+            },
+            {
+                "id": "12",
+                "name": "Ürün 12",
+                "price": 20,
+                "description": "Ürün 12 Açıklama",
+                "image": "https://example.com/product12.jpg"
+            },
+            {
+                "id": "13",
+                "name": "Ürün 13",
+                "price": 15,
+                "description": "Ürün 13 Açıklama",
+                "image": "https://example.com/product13.jpg"
+            },
+            {
+                "id": "14",
+                "name": "Ürün 14",
+                "price": 25,
+                "description": "Ürün 14 Açıklama",
+                "image": "https://example.com/product14.jpg"
+            },
+            {
+                "id": "15",
+                "name": "Ürün 15",
+                "price": 12,
+                "description": "Ürün 15 Açıklama",
+                "image": "https://example.com/product15.jpg"
+            },
+            {
+                "id": "16",
+                "name": "Ürün 16",
+                "price": 18,
+                "description": "Ürün 16 Açıklama",
+                "image": "https://example.com/product16.jpg"
+            },
+            {
+                "id": "17",
+                "name": "Ürün 17",
+                "price": 30,
+                "description": "Ürün 17 Açıklama",
+                "image": "https://example.com/product17.jpg"
+            },
+            {
+                "id": "18",
+                "name": "Ürün 18",
+                "price": 22,
+                "description": "Ürün 18 Açıklama",
+                "image": "https://example.com/product18.jpg"
+            },
+            {
+                "id": "19",
+                "name": "Ürün 19",
+                "price": 28,
+                "description": "Ürün 19 Açıklama",
+                "image": "https://example.com/product19.jpg"
+            },
+            {
+                "id": "20",
+                "name": "Ürün 20",
+                "price": 32,
+                "description": "Ürün 20 Açıklama",
+                "image": "https://example.com/product20.jpg"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Kategori 3",
+        "products": [
+            {
+                "id": "21",
+                "name": "Ürün 21",
+                "price": 10,
+                "description": "Ürün 21 Açıklama",
+                "image": "https://example.com/product21.jpg"
+            },
+            {
+                "id": "22",
+                "name": "Ürün 22",
+                "price": 20,
+                "description": "Ürün 22 Açıklama",
+                "image": "https://example.com/product22.jpg"
+            },
+            {
+                "id": "23",
+                "name": "Ürün 23",
+                "price": 15,
+                "description": "Ürün 23 Açıklama",
+                "image": "https://example.com/product23.jpg"
+            },
+            {
+                "id": "24",
+                "name": "Ürün 24",
+                "price": 25,
+                "description": "Ürün 24 Açıklama",
+                "image": "https://example.com/product24.jpg"
+            },
+            {
+                "id": "25",
+                "name": "Ürün 25",
+                "price": 12,
+                "description": "Ürün 25 Açıklama",
+                "image": "https://example.com/product25.jpg"
+            },
+            {
+                "id": "26",
+                "name": "Ürün 26",
+                "price": 18,
+                "description": "Ürün 26 Açıklama",
+                "image": "https://example.com/product26.jpg"
+            },
+            {
+                "id": "27",
+                "name": "Ürün 27",
+                "price": 30,
+                "description": "Ürün 27 Açıklama",
+                "image": "https://example.com/product27.jpg"
+            },
+            {
+                "id": "28",
+                "name": "Ürün 28",
+                "price": 22,
+                "description": "Ürün 28 Açıklama",
+                "image": "https://example.com/product28.jpg"
+            },
+            {
+                "id": "29",
+                "name": "Ürün 29",
+                "price": 28,
+                "description": "Ürün 29 Açıklama",
+                "image": "https://example.com/product29.jpg"
+            },
+            {
+                "id": "30",
+                "name": "Ürün 30",
+                "price": 32,
+                "description": "Ürün 30 Açıklama",
+                "image": "https://example.com/product30.jpg"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Kategori 4",
+        "products": [
+            {
+                "id": "31",
+                "name": "Ürün 31",
+                "price": 10,
+                "description": "Ürün 31 Açıklama",
+                "image": "https://example.com/product31.jpg"
+            },
+            {
+                "id": "32",
+                "name": "Ürün 32",
+                "price": 20,
+                "description": "Ürün 32 Açıklama",
+                "image": "https://example.com/product32.jpg"
+            },
+            {
+                "id": "33",
+                "name": "Ürün 33",
+                "price": 15,
+                "description": "Ürün 33 Açıklama",
+                "image": "https://example.com/product33.jpg"
+            },
+            {
+                "id": "34",
+                "name": "Ürün 34",
+                "price": 25,
+                "description": "Ürün 34 Açıklama",
+                "image": "https://example.com/product34.jpg"
+            },
+            {
+                "id": "35",
+                "name": "Ürün 35",
+                "price": 12,
+                "description": "Ürün 35 Açıklama",
+                "image": "https://example.com/product35.jpg"
+            },
+            {
+                "id": "36",
+                "name": "Ürün 36",
+                "price": 18,
+                "description": "Ürün 36 Açıklama",
+                "image": "https://example.com/product36.jpg"
+            },
+            {
+                "id": "37",
+                "name": "Ürün 37",
+                "price": 30,
+                "description": "Ürün 37 Açıklama",
+                "image": "https://example.com/product37.jpg"
+            },
+            {
+                "id": "38",
+                "name": "Ürün 38",
+                "price": 22,
+                "description": "Ürün 38 Açıklama",
+                "image": "https://example.com/product38.jpg"
+            },
+            {
+                "id": "39",
+                "name": "Ürün 39",
+                "price": 28,
+                "description": "Ürün 39 Açıklama",
+                "image": "https://example.com/product39.jpg"
+            },
+            {
+                "id": "40",
+                "name": "Ürün 40",
+                "price": 32,
+                "description": "Ürün 40 Açıklama",
+                "image": "https://example.com/product40.jpg"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "name": "Kategori 5",
+        "products": [
+            {
+                "id": "41",
+                "name": "Ürün 41",
+                "price": 10,
+                "description": "Ürün 41 Açıklama",
+                "image": "https://example.com/product41.jpg"
+            },
+            {
+                "id": "42",
+                "name": "Ürün 42",
+                "price": 20,
+                "description": "Ürün 42 Açıklama",
+                "image": "https://example.com/product42.jpg"
+            },
+            {
+                "id": "43",
+                "name": "Ürün 43",
+                "price": 15,
+                "description": "Ürün 43 Açıklama",
+                "image": "https://example.com/product43.jpg"
+            },
+            {
+                "id": "44",
+                "name": "Ürün 44",
+                "price": 25,
+                "description": "Ürün 44 Açıklama",
+                "image": "https://example.com/product44.jpg"
+            },
+            {
+                "id": "45",
+                "name": "Ürün 45",
+                "price": 12,
+                "description": "Ürün 45 Açıklama",
+                "image": "https://example.com/product45.jpg"
+            },
+            {
+                "id": "46",
+                "name": "Ürün 46",
+                "price": 18,
+                "description": "Ürün 46 Açıklama",
+                "image": "https://example.com/product46.jpg"
+            },
+            {
+                "id": "47",
+                "name": "Ürün 47",
+                "price": 30,
+                "description": "Ürün 47 Açıklama",
+                "image": "https://example.com/product47.jpg"
+            },
+            {
+                "id": "48",
+                "name": "Ürün 48",
+                "price": 22,
+                "description": "Ürün 48 Açıklama",
+                "image": "https://example.com/product48.jpg"
+            },
+            {
+                "id": "49",
+                "name": "Ürün 49",
+                "price": 28,
+                "description": "Ürün 49 Açıklama",
+                "image": "https://example.com/product49.jpg"
+            },
+            {
+                "id": "50",
+                "name": "Ürün 50",
+                "price": 32,
+                "description": "Ürün 50 Açıklama",
+                "image": "https://example.com/product50.jpg"
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "name": "Kategori 6",
+        "products": [
+            {
+                "id": "51",
+                "name": "Ürün 51",
+                "price": 10,
+                "description": "Ürün 51 Açıklama",
+                "image": "https://example.com/product51.jpg"
+            },
+            {
+                "id": "52",
+                "name": "Ürün 52",
+                "price": 20,
+                "description": "Ürün 52 Açıklama",
+                "image": "https://example.com/product52.jpg"
+            },
+            {
+                "id": "53",
+                "name": "Ürün 53",
+                "price": 15,
+                "description": "Ürün 53 Açıklama",
+                "image": "https://example.com/product53.jpg"
+            },
+            {
+                "id": "54",
+                "name": "Ürün 54",
+                "price": 25,
+                "description": "Ürün 54 Açıklama",
+                "image": "https://example.com/product54.jpg"
+            },
+            {
+                "id": "55",
+                "name": "Ürün 55",
+                "price": 12,
+                "description": "Ürün 55 Açıklama",
+                "image": "https://example.com/product55.jpg"
+            },
+            {
+                "id": "56",
+                "name": "Ürün 56",
+                "price": 18,
+                "description": "Ürün 56 Açıklama",
+                "image": "https://example.com/product56.jpg"
+            },
+            {
+                "id": "57",
+                "name": "Ürün 57",
+                "price": 30,
+                "description": "Ürün 57 Açıklama",
+                "image": "https://example.com/product57.jpg"
+            },
+            {
+                "id": "58",
+                "name": "Ürün 58",
+                "price": 22,
+                "description": "Ürün 58 Açıklama",
+                "image": "https://example.com/product58.jpg"
+            },
+            {
+                "id": "59",
+                "name": "Ürün 59",
+                "price": 28,
+                "description": "Ürün 59 Açıklama",
+                "image": "https://example.com/product59.jpg"
+            },
+            {
+                "id": "60",
+                "name": "Ürün 60",
+                "price": 32,
+                "description": "Ürün 60 Açıklama",
+                "image": "https://example.com/product60.jpg"
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "name": "Kategori 7",
+        "products": [
+            {
+                "id": "61",
+                "name": "Ürün 61",
+                "price": 10,
+                "description": "Ürün 61 Açıklama",
+                "image": "https://example.com/product61.jpg"
+            },
+            {
+                "id": "62",
+                "name": "Ürün 62",
+                "price": 20,
+                "description": "Ürün 62 Açıklama",
+                "image": "https://example.com/product62.jpg"
+            },
+            {
+                "id": "63",
+                "name": "Ürün 63",
+                "price": 15,
+                "description": "Ürün 63 Açıklama",
+                "image": "https://example.com/product63.jpg"
+            },
+            {
+                "id": "64",
+                "name": "Ürün 64",
+                "price": 25,
+                "description": "Ürün 64 Açıklama",
+                "image": "https://example.com/product64.jpg"
+            },
+            {
+                "id": "65",
+                "name": "Ürün 65",
+                "price": 12,
+                "description": "Ürün 65 Açıklama",
+                "image": "https://example.com/product65.jpg"
+            },
+            {
+                "id": "66",
+                "name": "Ürün 66",
+                "price": 18,
+                "description": "Ürün 66 Açıklama",
+                "image": "https://example.com/product66.jpg"
+            },
+            {
+                "id": "67",
+                "name": "Ürün 67",
+                "price": 30,
+                "description": "Ürün 67 Açıklama",
+                "image": "https://example.com/product67.jpg"
+            },
+            {
+                "id": "68",
+                "name": "Ürün 68",
+                "price": 22,
+                "description": "Ürün 68 Açıklama",
+                "image": "https://example.com/product68.jpg"
+            },
+            {
+                "id": "69",
+                "name": "Ürün 69",
+                "price": 28,
+                "description": "Ürün 69 Açıklama",
+                "image": "https://example.com/product69.jpg"
+            },
+            {
+                "id": "70",
+                "name": "Ürün 70",
+                "price": 32,
+                "description": "Ürün 70 Açıklama",
+                "image": "https://example.com/product70.jpg"
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "name": "Kategori 8",
+        "products": [
+            {
+                "id": "71",
+                "name": "Ürün 71",
+                "price": 10,
+                "description": "Ürün 71 Açıklama",
+                "image": "https://example.com/product71.jpg"
+            },
+            {
+                "id": "72",
+                "name": "Ürün 72",
+                "price": 20,
+                "description": "Ürün 72 Açıklama",
+                "image": "https://example.com/product72.jpg"
+            },
+            {
+                "id": "73",
+                "name": "Ürün 73",
+                "price": 15,
+                "description": "Ürün 73 Açıklama",
+                "image": "https://example.com/product73.jpg"
+            },
+            {
+                "id": "74",
+                "name": "Ürün 74",
+                "price": 25,
+                "description": "Ürün 74 Açıklama",
+                "image": "https://example.com/product74.jpg"
+            },
+            {
+                "id": "75",
+                "name": "Ürün 75",
+                "price": 12,
+                "description": "Ürün 75 Açıklama",
+                "image": "https://example.com/product75.jpg"
+            },
+            {
+                "id": "76",
+                "name": "Ürün 76",
+                "price": 18,
+                "description": "Ürün 76 Açıklama",
+                "image": "https://example.com/product76.jpg"
+            },
+            {
+                "id": "77",
+                "name": "Ürün 77",
+                "price": 30,
+                "description": "Ürün 77 Açıklama",
+                "image": "https://example.com/product77.jpg"
+            },
+            {
+                "id": "78",
+                "name": "Ürün 78",
+                "price": 22,
+                "description": "Ürün 78 Açıklama",
+                "image": "https://example.com/product78.jpg"
+            },
+            {
+                "id": "79",
+                "name": "Ürün 79",
+                "price": 28,
+                "description": "Ürün 79 Açıklama",
+                "image": "https://example.com/product79.jpg"
+            },
+            {
+                "id": "80",
+                "name": "Ürün 80",
+                "price": 32,
+                "description": "Ürün 80 Açıklama",
+                "image": "https://example.com/product80.jpg"
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "name": "Kategori 9",
+        "products": [
+            {
+                "id": "81",
+                "name": "Ürün 81",
+                "price": 10,
+                "description": "Ürün 81 Açıklama",
+                "image": "https://example.com/product81.jpg"
+            },
+            {
+                "id": "82",
+                "name": "Ürün 82",
+                "price": 20,
+                "description": "Ürün 82 Açıklama",
+                "image": "https://example.com/product82.jpg"
+            },
+            {
+                "id": "83",
+                "name": "Ürün 83",
+                "price": 15,
+                "description": "Ürün 83 Açıklama",
+                "image": "https://example.com/product83.jpg"
+            },
+            {
+                "id": "84",
+                "name": "Ürün 84",
+                "price": 25,
+                "description": "Ürün 84 Açıklama",
+                "image": "https://example.com/product84.jpg"
+            },
+            {
+                "id": "85",
+                "name": "Ürün 85",
+                "price": 12,
+                "description": "Ürün 85 Açıklama",
+                "image": "https://example.com/product85.jpg"
+            },
+            {
+                "id": "86",
+                "name": "Ürün 86",
+                "price": 18,
+                "description": "Ürün 86 Açıklama",
+                "image": "https://example.com/product86.jpg"
+            },
+            {
+                "id": "87",
+                "name": "Ürün 87",
+                "price": 30,
+                "description": "Ürün 87 Açıklama",
+                "image": "https://example.com/product87.jpg"
+            },
+            {
+                "id": "88",
+                "name": "Ürün 88",
+                "price": 22,
+                "description": "Ürün 88 Açıklama",
+                "image": "https://example.com/product88.jpg"
+            },
+            {
+                "id": "89",
+                "name": "Ürün 89",
+                "price": 28,
+                "description": "Ürün 89 Açıklama",
+                "image": "https://example.com/product89.jpg"
+            },
+            {
+                "id": "90",
+                "name": "Ürün 90",
+                "price": 32,
+                "description": "Ürün 90 Açıklama",
+                "image": "https://example.com/product90.jpg"
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "name": "Kategori 10",
+        "products": [
+            {
+                "id": "91",
+                "name": "Ürün 91",
+                "price": 10,
+                "description": "Ürün 91 Açıklama",
+                "image": "https://example.com/product91.jpg"
+            },
+            {
+                "id": "92",
+                "name": "Ürün 92",
+                "price": 20,
+                "description": "Ürün 92 Açıklama",
+                "image": "https://example.com/product92.jpg"
+            },
+            {
+                "id": "93",
+                "name": "Ürün 93",
+                "price": 15,
+                "description": "Ürün 93 Açıklama",
+                "image": "https://example.com/product93.jpg"
+            },
+            {
+                "id": "94",
+                "name": "Ürün 94",
+                "price": 25,
+                "description": "Ürün 94 Açıklama",
+                "image": "https://example.com/product94.jpg"
+            },
+            {
+                "id": "95",
+                "name": "Ürün 95",
+                "price": 12,
+                "description": "Ürün 95 Açıklama",
+                "image": "https://example.com/product95.jpg"
+            },
+            {
+                "id": "96",
+                "name": "Ürün 96",
+                "price": 18,
+                "description": "Ürün 96 Açıklama",
+                "image": "https://example.com/product96.jpg"
+            },
+            {
+                "id": "97",
+                "name": "Ürün 97",
+                "price": 30,
+                "description": "Ürün 97 Açıklama",
+                "image": "https://example.com/product97.jpg"
+            },
+            {
+                "id": "98",
+                "name": "Ürün 98",
+                "price": 22,
+                "description": "Ürün 98 Açıklama",
+                "image": "https://example.com/product98.jpg"
+            },
+            {
+                "id": "99",
+                "name": "Ürün 99",
+                "price": 28,
+                "description": "Ürün 99 Açıklama",
+                "image": "https://example.com/product99.jpg"
+            },
+            {
+                "id": "100",
+                "name": "Ürün 100",
+                "price": 32,
+                "description": "Ürün 100 Açıklama",
+                "image": "https://example.com/product100.jpg"
+            }
+        ]
+    }
+]
