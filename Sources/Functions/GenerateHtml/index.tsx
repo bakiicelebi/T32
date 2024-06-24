@@ -1,1 +1,0 @@
-export {generateReceiptHTML} from "./GenerateHtml"
