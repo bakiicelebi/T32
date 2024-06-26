@@ -1,10 +1,9 @@
 import { View, Text, Box, Center, Button, VStack, Heading, HStack, Image, ScrollView, FlatList, Pressable, Modal } from 'native-base';
 import React, { useEffect, useState } from 'react';
 import { GestureHandlerRootView, Swipeable } from 'react-native-gesture-handler';
-import { ActivityIndicator, List } from 'react-native-paper';
 import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 import CartCards from '../CartCards';
-import { Alert } from 'react-native';
+import { ActivityIndicator, Alert } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { useSaleContext } from '../../../context/SaleContext';
 import { useCartContext } from '../../../context/CartContext';

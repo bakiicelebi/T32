@@ -9,10 +9,6 @@ export default StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         backgroundColor: 'blue',
-<<<<<<< HEAD
-=======
-        
->>>>>>> 53e71564be5b352e820b4091f4327329cde30e3a
     },
     menu: {
         backgroundColor: 'green',
@@ -27,11 +23,6 @@ export default StyleSheet.create({
         paddingHorizontal: 10,
     },
     menuButtonText: {
-<<<<<<< HEAD
         paddingLeft:10
-=======
-        fontSize: 24,
-        color:"black"
->>>>>>> 53e71564be5b352e820b4091f4327329cde30e3a
     },
 })

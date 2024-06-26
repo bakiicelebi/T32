@@ -7,7 +7,6 @@ import SaleScreen from "./Screens/SaleScreen";
 import LogInScreen from "./Screens/LogInScreen/LogInScreen"
 import ProductScreen from "./Screens/ProductScreen";
 import CategoryScreen from "./Screens/CategoryScreen";
-import { PaperProvider } from 'react-native-paper';
 import PaymentScreen from "./Screens/PaymentScreen";
 import { SaleProvider } from "./context/SaleContext";
 import { CartProvider } from "./context/CartContext";
@@ -33,7 +32,7 @@ const Router = () => {
         const storedLanguage = await AsyncStorage.getItem('Language');
         if (storedLanguage) {
           i18next.changeLanguage(storedLanguage);
-          console.log("Started with" + storedLanguage)
+          console.log("Started with " + storedLanguage)
         }
       } catch (e) {
         console.log(e)
@@ -72,7 +71,7 @@ const Router = () => {
                 <Stack.Navigator screenOptions={{
                   headerShown: false
                 }} >
-                  {/* <Stack.Screen name="LogInScreen" component={LogInScreen} /> */}
+                  <Stack.Screen name="LogInScreen" component={LogInScreen} />
                   <Stack.Screen name="HomeScreen" component={HomeScreen} />
                   <Stack.Screen name="SaleScreen" component={SaleScreen} />
                   <Stack.Screen name="PaymentScreen" component={PaymentScreen} />

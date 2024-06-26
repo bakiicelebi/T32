@@ -3,9 +3,8 @@ import CartProductMng from "../CartProductMng";
 import SwipeableCards from "../SwipeableCards";
 import { useEffect, useState } from "react";
 import { useData } from "../../../context/DataContext";
-import { ActivityIndicator } from "react-native-paper";
 import { useCartContext } from "../../../context/CartContext";
-import { useWindowDimensions } from "react-native";
+import { ActivityIndicator, useWindowDimensions } from "react-native";
 import { useTranslation } from "react-i18next";
 
 const CartCards = ({ setDiscountPrices, setPrices, item, type, handleDeleting, cartPrices }: any) => {

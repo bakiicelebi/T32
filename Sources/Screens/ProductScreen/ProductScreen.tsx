@@ -3,7 +3,6 @@ import { useWindowDimensions, View } from 'react-native';
 import { Box, Heading, HStack, Text, VStack, Skeleton, useColorMode, FlatList } from 'native-base';
 import { TabView, TabBar } from 'react-native-tab-view';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import { ActivityIndicator } from 'react-native-paper';
 import styles from "./ProductScreen.style"; // Ensure you have styles defined
 import ProductCard from '../../Components/Products/ProductCard';
 import { useSaleContext } from '../../context/SaleContext';

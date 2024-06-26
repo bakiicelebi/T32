@@ -5,7 +5,6 @@ import ProductScreen from "../../../Screens/ProductScreen";
 import { Box, HStack, VStack, Button, useDisclose, useColorMode, Text } from 'native-base';
 import Cart from "../Cart"
 import SaleTabBar from "../SaleTabBar";
-import { createMaterialBottomTabNavigator } from 'react-native-paper/react-navigation';
 import BarcodeInput from '../BarcodeInput';
 import Campaigns from '../Campaigns';
 import BarcodeScreen from '../BarcodeScreen';

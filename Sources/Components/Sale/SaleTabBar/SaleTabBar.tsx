@@ -1,8 +1,8 @@
 import { Box, Modal, Pressable, Text } from "native-base";
 import SaleTabs from "../SaleTabs";
 import { useEffect, useState } from "react";
-import { ActivityIndicator } from "react-native-paper";
 import LogoLoading from "../../GeneralComponents/LottieComponents/LogoLoading";
+import { ActivityIndicator } from "react-native";
 
 
 const SaleTabBar = ({ nav, tabNumber, incTabs, decTabs, openTabs, setSelectedSale, selectedSale }: any) => {
