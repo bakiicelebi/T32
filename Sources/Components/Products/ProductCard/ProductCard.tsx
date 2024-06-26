@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Box, HStack, Text, VStack, Button, Image, Pressable, Spinner, Modal, Center } from 'native-base';
 import React, { memo, useMemo, useState } from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -125,17 +124,3 @@ const ProductCard = memo(
 );
 
 export default memo(ProductCard);
-=======
-import { View, Text } from 'react-native'
-import React from 'react'
-
-const ProductCard = () => {
-  return (
-    <View>
-      <Text>ProductCard</Text>
-    </View>
-  )
-}
-
-export default ProductCard
->>>>>>> 53e71564be5b352e820b4091f4327329cde30e3a

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Box, HStack, Text, Pressable, useColorMode, Modal } from 'native-base'
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -10,19 +9,10 @@ const SaleTabs = ({ tabNumber, no, nav, decTabs, openTabs, setSelectedSale, sele
     const [loading, setLoading] = useState(false)
 
     const { t, i18n } = useTranslation()
-=======
-import { Box, HStack, Text, Pressable } from 'native-base'
-import React, { useEffect, useState } from 'react';
-
-
-const SaleTabs = ({ tabNumber, no, nav, decTabs, openTabs, setSelectedSale, selectedSale }: any) => {
-
->>>>>>> 53e71564be5b352e820b4091f4327329cde30e3a
     const isSelectedSaleTab = (index: any) => {
         return index === selectedSale;
     }
 
-<<<<<<< HEAD
     useEffect(() => {
         setLoading(false)
     }, [selectedSale])
@@ -58,17 +48,6 @@ const SaleTabs = ({ tabNumber, no, nav, decTabs, openTabs, setSelectedSale, sele
             </Box>
         </Modal>
     </>
-=======
-    return (
-        <Pressable onPress={() => { setSelectedSale(no); console.log(selectedSale); nav.navigate(`Sale${openTabs[no - 1]}`) }}>
-            <Box style={{ backgroundColor: isSelectedSaleTab(no) ? "green" : "yellow", flexDirection: "row", alignItems: "center", marginHorizontal: 10, borderWidth: 1, paddingHorizontal: 10, paddingVertical: 5 }}>
-                <Text style={{ fontSize: 20 }}>Sale {no}</Text>
-                {tabNumber > 1 && <Pressable onPress={() => decTabs(openTabs[no - 1])}>
-                    <Text style={{ fontSize: 20, paddingLeft: 15 }}>X</Text>
-                </Pressable>}
-            </Box>
-        </Pressable >
->>>>>>> 53e71564be5b352e820b4091f4327329cde30e3a
     )
 }
 

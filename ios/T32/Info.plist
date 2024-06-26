@@ -42,10 +42,6 @@
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
-<<<<<<< HEAD
-=======
-		<string>UIInterfaceOrientationPortrait</string>
->>>>>>> 53e71564be5b352e820b4091f4327329cde30e3a
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
@@ -58,12 +54,9 @@
 		<string>D2760000850100</string>
 		<string>D2760000850101</string>
 	</array>
-<<<<<<< HEAD
 	<key>NSCameraUsageDescription</key>
 	<string>$(PRODUCT_NAME) needs access to your Camera.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>$(PRODUCT_NAME) needs access to your Microphone.</string>
-=======
->>>>>>> 53e71564be5b352e820b4091f4327329cde30e3a
 </dict>
 </plist>

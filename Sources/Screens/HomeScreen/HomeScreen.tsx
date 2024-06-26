@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./HomeScreen.style";
-import ListBase from "../../Components/Home/Menu/ButtonList/ListBase";
+import ListBase from "../../Components/Home/Menu/ListBase";
 import ProfileDrawer from "../../Components/Home/Drawer/ProfileDrawer";
 import { Heading, Box, HStack, VStack, Text } from "native-base";
 import Dashboard from "../../Components/Home/Dashboard";

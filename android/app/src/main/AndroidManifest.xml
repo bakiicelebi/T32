@@ -2,15 +2,11 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.NFC" />
-<<<<<<< HEAD
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     
-=======
-
->>>>>>> 53e71564be5b352e820b4091f4327329cde30e3a
     <application
       android:name=".MainApplication"
       android:label="@string/app_name"
@@ -23,10 +19,7 @@
         android:label="@string/app_name"
         android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
         android:launchMode="singleTask"
-<<<<<<< HEAD
         android:screenOrientation="sensorLandscape"
-=======
->>>>>>> 53e71564be5b352e820b4091f4327329cde30e3a
         android:windowSoftInputMode="adjustResize"
         android:exported="true">
         <intent-filter>
@@ -35,7 +28,6 @@
         </intent-filter>
       </activity>
     </application>
-<<<<<<< HEAD
    <queries>
    <intent>
      <action android:name="android.intent.action.VIEW" />
@@ -43,6 +35,4 @@
      <data android:mimeType="application/pdf" />
    </intent>
  </queries>
-=======
->>>>>>> 53e71564be5b352e820b4091f4327329cde30e3a
 </manifest>
