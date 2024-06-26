@@ -10,6 +10,7 @@ import { Box, HStack, VStack } from 'native-base';
 
 const DashBase = () => {
     return (
+<<<<<<< HEAD
         <Box  flex={1} padding={15}>
             <VStack alignItems={"center"} >
                 <HStack shadow={"4"} borderRadius={15} p={5} ml={-2}  pr={9} marginTop={7} 
@@ -30,6 +31,21 @@ const DashBase = () => {
                 </HStack>
             </VStack>
         </Box>
+=======
+            <Box bg={"darkBlue.800"} flex={1} padding={15}>
+                <VStack>
+                    <HStack >
+                        <NumberChart />
+                        <BarChart />
+                        <NumberChart />
+                    </HStack>
+                    <HStack alignItems={"center"} justifyContent={"space-evenly"}>
+                        <PieChart />
+                        <PieChart />
+                    </HStack>
+                </VStack>
+            </Box>
+>>>>>>> 53e71564be5b352e820b4091f4327329cde30e3a
     )
 }
 
