@@ -1,6 +1,4 @@
-import { View, Text, ScrollView } from 'react-native';
 import React from 'react';
-import styles from "./DashBase.style";
 import NumberChart from '../NumberChart';
 import BarChart from '../BarChart';
 import PieChart from '../PieChart';

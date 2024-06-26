@@ -7,7 +7,7 @@ const useUserFetch = (url: string) => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get(url + "users");
+            const response = await axios.get(url + "users",{timeout:3000});
             setData(response.data); // Assuming the response data structure matches your needs
         } catch (error) {
            setError(error)

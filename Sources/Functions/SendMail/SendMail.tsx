@@ -1,7 +1,5 @@
 import emailjs from '@emailjs/react-native';
 import { EMAIL_PUBLIC_KEY, EMAIL_SERVICE_KEY, EMAIL_TEMPLATE_KEY } from '@env';
-import React from 'react'
-import { useTranslation } from 'react-i18next';
 import { Alert } from 'react-native'
 
 const SendMail = (email: any, message: any,t:any) => {

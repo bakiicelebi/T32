@@ -1,14 +1,11 @@
-import { View, Text, Box, Center, Button, VStack, Heading, HStack, Image, ScrollView, FlatList, Pressable, Modal } from 'native-base';
+import { Text, Box, Center, Button, VStack, Heading, HStack, FlatList, Modal } from 'native-base';
 import React, { useEffect, useState } from 'react';
-import { GestureHandlerRootView, Swipeable } from 'react-native-gesture-handler';
-import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 import CartCards from '../CartCards';
 import { ActivityIndicator, Alert } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { useSaleContext } from '../../../context/SaleContext';
 import { useCartContext } from '../../../context/CartContext';
 import CustomAccordion from '../../Products/CustomAccordion';
-import { useMarket } from '../../../context/MarketContext';
 import { useTranslation } from 'react-i18next';
 import LogoLoading from '../../GeneralComponents/LottieComponents/LogoLoading';
 

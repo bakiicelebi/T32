@@ -1,4 +1,4 @@
-import { Box, NativeBaseProvider, Text, Input } from 'native-base'
+import { Box, NativeBaseProvider, Input } from 'native-base'
 import React, { useEffect, useState } from 'react'
 import NumberPad from '../NumberPad'
 import { useCartContext } from '../../../context/CartContext';

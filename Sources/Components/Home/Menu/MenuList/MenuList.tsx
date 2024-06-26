@@ -1,6 +1,5 @@
 import React from 'react';
-import { Box, HStack, Avatar, VStack, Text, Spacer, Pressable, Badge, Flex, Image, useColorMode } from 'native-base';
-import { Dimensions, useWindowDimensions, TouchableOpacity } from 'react-native';
+import { Box, HStack, Text, Pressable, useColorMode } from 'native-base';
 import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 import { useTranslation } from 'react-i18next';
 

@@ -1,4 +1,4 @@
-import { Box, Center, FlatList, Heading, HStack, Text, Button, Input, VStack, Skeleton, useColorMode } from 'native-base';
+import { Box, FlatList, Heading, HStack, Text, Button, Input, VStack, Skeleton, useColorMode } from 'native-base';
 import React, { useCallback, useEffect, useState } from 'react';
 import { useData } from '../../context/DataContext';
 import ProductCard from '../../Components/Products/ProductCard';

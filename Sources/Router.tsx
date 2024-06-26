@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { ColorMode, extendTheme, NativeBaseProvider, StorageManager, useColorMode } from "native-base";
+import { ColorMode, NativeBaseProvider, StorageManager } from "native-base";
 import HomeScreen from "./Screens/HomeScreen"
 import SaleScreen from "./Screens/SaleScreen";
 import LogInScreen from "./Screens/LogInScreen/LogInScreen"
@@ -18,6 +18,7 @@ import AllProductsScreen from "./Screens/AllProductsScreen";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import i18next from "i18next";
 import "./context/Translate/i18n";
+import SplashScreen from "./Screens/SplashScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,7 @@ const Router = () => {
 
 
   const [isInHome, setIsInHome] = useState(true)
+
 
   useEffect(() => {
     const loadLanguage = async () => {
@@ -71,6 +73,7 @@ const Router = () => {
                 <Stack.Navigator screenOptions={{
                   headerShown: false
                 }} >
+                  <Stack.Screen name="SplashScreen" component={SplashScreen} />
                   <Stack.Screen name="LogInScreen" component={LogInScreen} />
                   <Stack.Screen name="HomeScreen" component={HomeScreen} />
                   <Stack.Screen name="SaleScreen" component={SaleScreen} />

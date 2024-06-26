@@ -1,7 +1,7 @@
-import { Box, VStack, Divider, Text, HStack, FlatList } from 'native-base'
+import { Box, VStack, Text, HStack, FlatList } from 'native-base'
 import React, { useState } from 'react'
 import CartCards from '../../Sale/CartCards';
-import { ActivityIndicator, LogBox } from 'react-native';
+import { ActivityIndicator } from 'react-native';
 import CustomAccordion from '../../Products/CustomAccordion';
 import { useTranslation } from 'react-i18next';
 

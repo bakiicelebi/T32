@@ -1,4 +1,4 @@
-import { Box, Divider, Heading, Text, VStack } from 'native-base'
+import { Box, Text, VStack } from 'native-base'
 import React, { useEffect, useState } from 'react'
 import ButtonsSection from '../ButtonsSection'
 

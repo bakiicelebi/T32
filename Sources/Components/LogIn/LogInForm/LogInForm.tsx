@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Heading, VStack, FormControl, Input, Center, Pressable } from 'native-base'
+import { Box, Heading, VStack, Input, Center, Pressable } from 'native-base'
 import NumberPad from '../../Sale/NumberPad'
 import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 import { useTranslation } from 'react-i18next'
@@ -29,13 +29,13 @@ const LogInForm = (props: any) => {
     }
 
     return (
-        <Box safeArea p="2" py={"8"} w="90%" maxW={"50%"}>
+        <Box   py={"8"} w="90%" maxW={"50%"}>
             <Heading size="lg" fontWeight="600" color="coolGray.800" _dark={{
                 color: "warmGray.50"
             }}>
                 {t('welcome')} 1
             </Heading>
-            <Heading mt="2" _dark={{
+            <Heading px={2} mt="2" _dark={{
                 color: "warmGray.200"
             }} color="coolGray.600" fontWeight="medium" size="md">
                 {t('sign in to continue')}!
@@ -54,7 +54,7 @@ const LogInForm = (props: any) => {
                         mt={5}
                         fontSize={"2xl"}
                         padding={1}
-                        placeholder='User Code'
+                        placeholder={t('user code')}
                         value={props.userCode}
                         editable={false}
                         selectTextOnFocus={false}
@@ -70,7 +70,7 @@ const LogInForm = (props: any) => {
                         mb={5}
                         fontSize={"2xl"}
                         padding={1}
-                        placeholder='Password'
+                        placeholder={t('password')}
                         type={showPassword ? "text" : "password"}
                         value={props.password}
                         editable={false}

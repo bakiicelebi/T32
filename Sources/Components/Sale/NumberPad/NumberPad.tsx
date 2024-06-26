@@ -1,4 +1,4 @@
-import { Box, FlatList, DeleteIcon, Text, Button, NativeBaseProvider, useColorMode } from 'native-base'
+import { Box, FlatList, Text, Button, useColorMode } from 'native-base'
 import React from 'react'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 

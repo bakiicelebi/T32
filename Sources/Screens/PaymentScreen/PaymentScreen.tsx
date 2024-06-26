@@ -1,8 +1,7 @@
-import { Box, Button, Center, Heading, HStack, Text, VStack } from 'native-base';
+import { Box, HStack } from 'native-base';
 import React, { useEffect, useState } from 'react';
 import { useRoute } from '@react-navigation/native';
-import { KeyboardAvoidingView, LogBox, Platform, useWindowDimensions, ScrollView } from 'react-native';
-import Cart from '../../Components/Sale/Cart';
+import { useWindowDimensions, ScrollView } from 'react-native';
 import OptionsSection from '../../Components/Payment/OptionsSection';
 import PaymentCart from '../../Components/Payment/PaymentCart';
 import PaymentFinalize from '../../Components/Payment/PaymentFinalize';

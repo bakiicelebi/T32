@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Center, Input, Button, Modal, useDisclose } from 'native-base'
+import { Center, Button, Modal, useDisclose } from 'native-base'
 
 const CustomModal = ({ children, button1, button2, header, isOpen, setIsOpen, buttonConfirm }: any) => {
 

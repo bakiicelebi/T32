@@ -1,9 +1,9 @@
-import { Box, HStack, Text, VStack, Button, Image, Pressable, Spinner, Modal, Center } from 'native-base';
+import { Box, HStack, Text, VStack, Image, Pressable, Modal } from 'native-base';
 import React, { memo, useMemo, useState } from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useSaleContext } from '../../../context/SaleContext';
 import { useCartContext } from '../../../context/CartContext';
-import { Alert, TouchableOpacity } from 'react-native';
+import { Alert } from 'react-native';
 import { useData } from '../../../context/DataContext';
 import LogoLoading from '../../GeneralComponents/LottieComponents/LogoLoading';
 

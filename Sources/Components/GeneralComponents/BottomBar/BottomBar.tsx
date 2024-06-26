@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Box, Divider, HStack, Text, useColorMode } from 'native-base'
+import React from 'react'
+import { Box, HStack, Text, useColorMode } from 'native-base'
 import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 import { useMarket } from '../../../context/MarketContext'
 import packageJson from '../../../../package.json';

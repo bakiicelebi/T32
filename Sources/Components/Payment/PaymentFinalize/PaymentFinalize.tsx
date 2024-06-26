@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { Box, VStack, Input, HStack, View, Text, Button, Divider, Heading, Center, Modal, useDisclose } from 'native-base'
+import { Box, VStack, HStack, Text, Button, Divider, Heading } from 'native-base'
 import NumberPad from '../../Sale/NumberPad'
 import CustomModal from '../CustomModal/CustomModal';
 import Receipt from '../Receipt';
 import { useNavigation } from '@react-navigation/native';
-import { useCartContext } from '../../../context/CartContext';
 import { Alert, LogBox } from 'react-native';
 import { useTranslation } from 'react-i18next';
 

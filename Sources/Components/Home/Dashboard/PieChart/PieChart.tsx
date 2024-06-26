@@ -1,7 +1,6 @@
 import React from 'react';
 import { PieChart as PieGraph } from 'react-native-gifted-charts';
-import { useState } from "react";
-import { ScrollView, View, Button } from "react-native";
+import { View } from "react-native";
 import { Box, Text, useColorMode } from 'native-base';
 import { useTranslation } from 'react-i18next';
 

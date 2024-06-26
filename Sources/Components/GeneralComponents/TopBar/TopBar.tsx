@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { Pressable, Switch } from 'react-native'
-import { Box, Center, Divider, HStack, Image, Menu, Modal, Spinner, Text, useColorMode, VStack } from 'native-base'
+import { Pressable } from 'react-native'
+import { Box, HStack, Image, Menu, Modal, Text, useColorMode } from 'native-base'
 import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 import Icon2 from "react-native-vector-icons/MaterialIcons"
 import OnlinePeople from '../../Home/OnlinePeople'
 import { useData } from '../../../context/DataContext'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { useTranslation } from 'react-i18next'
-import i18n from '../../../context/Translate/i18n'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import i18next from 'i18next'
 import LogoLoading from '../LottieComponents/LogoLoading'
@@ -103,7 +102,7 @@ const TopBar = () => {
             }} position={"absolute"} zIndex={999} top={0} justifyContent={"center"} w={"100%"} height={"7%"}>
                 <HStack flex={1} alignItems={"center"} justifyContent={"space-between"}  >
                     <HStack ml={15} alignItems={"center"} >
-                        <Image alt='T32Logo' maxW={65} resizeMode='contain' maxH={65} source={require("../../../assets/Images/ayrilan.png")} />
+                        <Image alt='T32Logo' maxW={65} resizeMode='contain' maxH={65} source={require("../../../assets/Images/TopBar.png")} />
                         <Text ml={5} fontWeight={"bold"} fontSize={"2xl"}>T32 GROCERY</Text>
                     </HStack>
                     <HStack alignItems={"center"} justifyContent={"flex-end"} pr={22} space={10}>

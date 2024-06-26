@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import React from 'react';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import SaleView from '../../Components/Sale/SaleView';
 import { useSaleContext } from '../../context/SaleContext';

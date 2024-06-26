@@ -1,12 +1,12 @@
-import { useDisclose, Center, Actionsheet, Heading, Button, useToast, HStack, Text } from "native-base";
-import React, { useEffect } from "react";
+import { Center, Actionsheet, Heading, useToast, HStack, Text } from "native-base";
+import React from "react";
 import { useData } from "../../../context/DataContext";
 import { useCartContext } from "../../../context/CartContext";
 import { useTranslation } from "react-i18next";
 
 const Campaigns = ({ isOpen, onClose }: any) => {
     const { t, i18n } = useTranslation()
-    const { campaignsState: campaigns, fetchData }: any = useData();
+    const { campaignsState: campaigns }: any = useData();
     const { discountInvert, isDiscountApplied } = useCartContext()
 
     const toast = useToast();

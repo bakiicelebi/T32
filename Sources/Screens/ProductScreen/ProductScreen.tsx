@@ -1,11 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { useWindowDimensions, View } from 'react-native';
-import { Box, Heading, HStack, Text, VStack, Skeleton, useColorMode, FlatList } from 'native-base';
+import { useWindowDimensions } from 'react-native';
+import { Box, HStack, Text, VStack, Skeleton, useColorMode, FlatList } from 'native-base';
 import { TabView, TabBar } from 'react-native-tab-view';
-import { useNavigation, useRoute } from '@react-navigation/native';
-import styles from "./ProductScreen.style"; // Ensure you have styles defined
+import { useRoute } from '@react-navigation/native';
 import ProductCard from '../../Components/Products/ProductCard';
-import { useSaleContext } from '../../context/SaleContext';
 import { useData } from '../../context/DataContext';
 import TopBar from '../../Components/GeneralComponents/TopBar';
 import BottomBar from '../../Components/GeneralComponents/BottomBar';

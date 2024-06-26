@@ -1,4 +1,4 @@
-import { Box, Button, HStack, Text, useColorMode } from 'native-base'
+import {  Button, HStack, Text, useColorMode } from 'native-base'
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"

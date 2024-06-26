@@ -15,7 +15,7 @@ const UseAllProductsFetch = (url: string) => {
         try {
             let allProductsData:any = [];
             for (let i = 0; i <= 11; i++) {
-                const { data: responseData } = await axios.get(`${url}${i}`);
+                const { data: responseData } = await axios.get(`${url}${i}`,{timeout:3000});
                 allProductsData = [...allProductsData, ...responseData];
             }
             setLoading(false);

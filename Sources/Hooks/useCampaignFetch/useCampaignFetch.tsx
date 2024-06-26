@@ -10,7 +10,7 @@ const UseCampaignFetch = (url: any) => {
     const fetchData = async () => {
         setLoading(true);
         try {
-            const { data: responseData } = await axios.get(url);
+            const { data: responseData } = await axios.get(url,{timeout:3000});
             setLoading(false)
             setData(responseData);
         } catch (err: any) {

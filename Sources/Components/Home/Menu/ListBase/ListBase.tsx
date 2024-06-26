@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Box, Heading, FlatList, HStack, Avatar, VStack, Text, Spacer, useDisclose } from 'native-base'
+import React from 'react'
+import { Box, FlatList } from 'native-base'
 import MenuList from '../MenuList';
 import { useNavigation } from '@react-navigation/native';
 import { useWindowDimensions } from 'react-native';

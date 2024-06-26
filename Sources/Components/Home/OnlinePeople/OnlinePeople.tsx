@@ -1,4 +1,4 @@
-import { Center, Avatar, NativeBaseProvider, Pressable, Box, FlatList, Text, useDisclose, Modal, Button, HStack } from 'native-base';
+import { Center, Avatar, Pressable, Box, FlatList, Text, useDisclose, Modal, Button, HStack } from 'native-base';
 import React, { useState } from 'react'
 import { useData } from '../../../context/DataContext';
 import { useTranslation } from 'react-i18next';

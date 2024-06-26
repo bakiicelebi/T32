@@ -1,4 +1,4 @@
-import { Box, Button, Center, Heading, HStack, Input, Modal, useDisclose } from 'native-base';
+import { Box, Button, Center, Heading, HStack, Input } from 'native-base';
 import React, { useState } from 'react'
 import Buttons from '../Buttons/Buttons';
 import CustomModal from '../CustomModal';

@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import styles from "./HomeScreen.style";
 import ListBase from "../../Components/Home/Menu/ListBase";
 import ProfileDrawer from "../../Components/Home/Drawer/ProfileDrawer";
-import { Heading, Box, HStack, VStack, Text } from "native-base";
+import { Box, HStack, VStack, Text } from "native-base";
 import Dashboard from "../../Components/Home/Dashboard";
-import OnlinePeople from "../../Components/Home/OnlinePeople/OnlinePeople";
 import BottomBar from "../../Components/GeneralComponents/BottomBar";
 import TopBar from "../../Components/GeneralComponents/TopBar";
 import CampaignsSlider from "../../Components/Home/CampaignsSlider";

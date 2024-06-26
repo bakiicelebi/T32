@@ -7,7 +7,6 @@ import Receipt from '../../Components/Payment/Receipt';
 import { createPDF } from '../../Functions/CreatePDF';
 import { generateReceiptHTML } from '../../Functions/GenerateHtml';
 import { useData } from '../../context/DataContext';
-import axios from 'axios';
 import TopBar from '../../Components/GeneralComponents/TopBar';
 import BottomBar from '../../Components/GeneralComponents/BottomBar';
 import { useTranslation } from 'react-i18next';
@@ -281,7 +280,7 @@ const ReportsScreen = () => {
                 <BottomBar />
             </Box>
             <CustomModal button2={t('cancel')} header={t("today's receipts")} isOpen={isReceiptsModalOpen} setIsOpen={setIsReceiptsModalOpen}>
-                {receipts.length ? <FlatList data={receipts} renderItem={renderReceipts} keyExtractor={item => item.saleNo} /> : <Text fontSize={20} textAlign={"center"}>{t('no receipts')}</Text>}
+                {receipts.length ? <FlatList data={receipts} renderItem={renderReceipts} keyExtractor={item => item.saleNo} /> : <Text fontSize={20} textAlign={"center"}>{t('no receipt')}</Text>}
             </CustomModal>
             <CustomModal buttonConfirm={handleSavePDF} button2={t('save as pdf')} header={t('receipts')} isOpen={isReceiptModalOpen} setIsOpen={setIsReceiptModalOpen}>
                 {selectedReceipt && <Receipt receiptData={selectedReceipt} />}

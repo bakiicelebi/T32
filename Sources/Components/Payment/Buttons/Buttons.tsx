@@ -1,4 +1,4 @@
-import { Box, Text, Button } from 'native-base'
+import { Box, Button } from 'native-base'
 import React from 'react'
 import { useTranslation } from 'react-i18next';
 

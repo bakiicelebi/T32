@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, useDisclose, Text, useColorMode } from 'native-base'
+import { Box, Button, Text, useColorMode } from 'native-base'
 import BarcodeScanner from '../BarcodeScanner'
 import { TouchableWithoutFeedback, useWindowDimensions } from 'react-native';
 import { BlurView } from '@react-native-community/blur';

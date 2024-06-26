@@ -13,7 +13,7 @@ const useCategoryRoutesFetch = (url: any) => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const { data: responseData } = await axios.get(url);
+      const { data: responseData } = await axios.get(url,{timeout:3000});
       const modifiedData = responseData.map((item: any) => ({
         key: item.key.toString(),
         title: item.name,

@@ -9,11 +9,6 @@ const SaleTabBar = ({ nav, tabNumber, incTabs, decTabs, openTabs, setSelectedSal
 
     const [loading, setLoading] = useState(false)
 
-    const isSelectedSaleTab = (index: any) => {
-        return index === selectedSale;
-    }
-
-    
 
     useEffect(() => {
         setLoading(false)

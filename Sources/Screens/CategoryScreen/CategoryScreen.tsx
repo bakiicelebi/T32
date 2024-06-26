@@ -1,9 +1,6 @@
-import { Box, Text, FlatList, Button } from 'native-base';
+import { Box, FlatList } from 'native-base';
 import React, { useState, useEffect } from 'react'
-import { API_CATEGORIES_URL } from "@env";
-import { API_BASE_URL } from "@env";
-import { useNavigation, useNavigationState, useRoute } from '@react-navigation/native';
-import useCategoryFetch from '../../Hooks/useCategoryFetch';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import CategoriesList from '../../Components/Categories/CategoriesList';
 import { useData } from '../../context/DataContext';
 import TopBar from '../../Components/GeneralComponents/TopBar';

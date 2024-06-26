@@ -13,7 +13,7 @@ const UseAllProductsFetch = (url: string, index: number) => {
     const fetchData = async () => {
         setLoading(true);
         try {
-            const { data: responseData } = await axios.get(`${url}${index}`);
+            const { data: responseData } = await axios.get(`${url}${index}`,{timeout:3000});
             setLoading(false);
             setData(responseData);
         } catch (err: any) {

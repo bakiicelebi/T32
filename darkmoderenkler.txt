@@ -27,3 +27,5 @@ turuncu "#ea7465"
 topbar #1e1f21
 
 bordercolor "#515557"
+
+logo: ad2118

@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { Animated, View, Button, Easing } from 'react-native';
+import React, { useEffect } from 'react';
+import { Easing } from 'react-native';
 import { Box, Text } from 'native-base';
 import AnimatedNumbers from 'react-native-animated-numbers';
 import { useTranslation } from 'react-i18next';

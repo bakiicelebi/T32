@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Center, HStack, Pressable, Heading, Button, VStack, Badge, Text, FlatList, Divider, Menu, useColorMode, Modal } from 'native-base';
-import { Alert, Dimensions, StyleSheet } from 'react-native';
-import { useMarket } from '../../context/MarketContext';
-import CustomModal from '../../Components/Payment/CustomModal';
-import Receipt from '../../Components/Payment/Receipt';
+import { Box, Center, HStack, Heading, Button, VStack, Text, Menu, useColorMode, Modal } from 'native-base';
+import { Dimensions } from 'react-native';
 import { createPDF } from '../../Functions/CreatePDF';
-import { generateReceiptHTML } from '../../Functions/GenerateHtml';
-import { useData } from '../../context/DataContext';
-import axios from 'axios';
 import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 import Icon2 from "react-native-vector-icons/MaterialIcons"
 import TopBar from '../../Components/GeneralComponents/TopBar';
