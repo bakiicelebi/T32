@@ -24,6 +24,7 @@ const Stack = createNativeStackNavigator();
 
 const Router = () => {
 
+
   const [isInHome, setIsInHome] = useState(true)
 
   useEffect(() => {
