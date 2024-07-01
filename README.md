@@ -134,7 +134,7 @@ To simulate API responses during development, you can use Mockoon, a tool for qu
 #### Example using
 ``` tsx
   import { API_BASE_URL } from '@env';
-  const response = await axios.get(`${API_BASE_URL}`)
+  const response = await axios.get(`${API_BASE_URL}/Categories`)
 ```
 
 ## Screenshots
