@@ -3,6 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { View, Text, Alert } from 'react-native';
 import axios from 'axios';
 import { API_BASE_URL, API_CATEGORIES_URL, API_STATUS_URL } from '@env';
+import { useTranslation } from 'react-i18next';
 
 interface MarketContextProps {
     receipts: any[];
@@ -37,6 +38,8 @@ const MarketProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [unsentReceipts, setUnsentReceipts] = useState<any[]>([]);
     const [wrongLogins, setWrongLogins] = useState<any[]>([]);
 
+    const { t, i18n } = useTranslation()
+
     useEffect(() => {
         loadStoredData();
         checkServerStatus();
@@ -61,11 +64,11 @@ const MarketProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
         }));
 
         try {
-            await axios.post(`${API_BASE_URL}receipts`, {data: receipt}, { timeout: 3000 });
+            await axios.post(`${API_BASE_URL}receipts`, { data: receipt }, { timeout: 3000 });
             console.log("Receipt Posted Successfully")
         } catch (error) {
             console.log("Receipt Couldn't Posted. Receipt Added Unsent Receipts")
-            Alert.alert("synchronization receipts", "receipt couldn't posted")
+            Alert.alert(t("synchronization receipts"), t("receipt couldn't posted"))
             const newUnsentReceipts = [...unsentReceipts, receipt];
             setUnsentReceipts(newUnsentReceipts);
             await AsyncStorage.setItem('unsentReceipts', JSON.stringify(newUnsentReceipts));
@@ -139,7 +142,7 @@ const MarketProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
             try {
                 await axios.post(`${API_BASE_URL}receipts`, receipt, { timeout: 3000 });
                 console.log("Receipt Synchronized Successfully");
-                Alert.alert("Receipt Synchronization", "Receipt Synchronized Successfully")
+                Alert.alert(t('synchronization receipts'), "Receipt Synchronized Successfully")
             } catch (error) {
                 newUnsentReceipts.push(receipt);
                 console.log("Receipt Couldn't be Synchronized");

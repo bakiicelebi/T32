@@ -1,0 +1,124 @@
+[
+   
+    {
+        "id": 81,
+        "userName": "Baki",
+        "name": "Baki",
+        "surname": "Celebi",
+        "isOnline": true,
+        "userCode": 8181,
+        "password": 8181,
+        "cashierNo": 81,
+        "cardNo": 818181
+    },
+    {
+        "id": 0,
+        "userName": "John",
+        "name": "John",
+        "surname": "Doe",
+        "isOnline": true,
+        "userCode": 1234,
+        "password": 1234,
+        "cashierNo": 1,
+        "cardNo": 545124
+    },
+    {
+        "id": 1,
+        "userName": "Alice",
+        "name": "Alice",
+        "surname": "Smith",
+        "isOnline": true,
+        "userCode": 1235,
+        "password": 1235,
+        "cashierNo": 2,
+        "cardNo": 545125
+    },
+    {
+        "id": 2,
+        "userName": "Bob",
+        "name": "Bob",
+        "surname": "Johnson",
+        "isOnline": false,
+        "userCode": 1236,
+        "password": 1236,
+        "cashierNo": 3,
+        "cardNo": 545126
+    },
+    {
+        "id": 3,
+        "userName": "Charlie",
+        "name": "Charlie",
+        "surname": "Brown",
+        "isOnline": false,
+        "userCode": 1237,
+        "password": 1237,
+        "cashierNo": 4,
+        "cardNo": 545127
+    },
+    {
+        "id": 4,
+        "userName": "David",
+        "name": "David",
+        "surname": "Davis",
+        "isOnline": true,
+        "userCode": 1238,
+        "password": 1238,
+        "cashierNo": 5,
+        "cardNo": 545128
+    },
+    {
+        "id": 5,
+        "userName": "Emma",
+        "name": "Emma",
+        "surname": "Martinez",
+        "isOnline": false,
+        "userCode": 1239,
+        "password": 1239,
+        "cashierNo": 6,
+        "cardNo": 545129
+    },
+    {
+        "id": 6,
+        "userName": "Frank",
+        "name": "Frank",
+        "surname": "Garcia",
+        "isOnline": true,
+        "userCode": 1240,
+        "password": 1240,
+        "cashierNo": 7,
+        "cardNo": 545130
+    },
+    {
+        "id": 7,
+        "userName": "Grace",
+        "name": "Grace",
+        "surname": "Miller",
+        "isOnline": false,
+        "userCode": 1241,
+        "password": 1241,
+        "cashierNo": 8,
+        "cardNo": 545131
+    },
+    {
+        "id": 8,
+        "userName": "Henry",
+        "name": "Henry",
+        "surname": "Wilson",
+        "isOnline": true,
+        "userCode": 1242,
+        "password": 1242,
+        "cashierNo": 9,
+        "cardNo": 545132
+    },
+    {
+        "id": 9,
+        "userName": "Isabella",
+        "name": "Isabella",
+        "surname": "Moore",
+        "isOnline": false,
+        "userCode": 1243,
+        "password": 1243,
+        "cashierNo": 10,
+        "cardNo": 545133
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+      "id": 10000,
+      "name": "Fruit & Vegetables",
+      "key": 0,
+      "imageUrl": "https://eadn-wc03-8558032.nxedge.io/wp-content/uploads/2023/02/Fruit-and-Vegetables-piled-high-1.jpg"
+    },
+    {
+      "id": 10001,
+      "name": "Meat, Fish, Poultry",
+      "key": 1,
+      "imageUrl": "https://chaldn.com/_mpimage/meat-fish?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D23737&q=low&v=1"
+    },
+    {
+      "id": 10002,
+      "name": "Breakfast",
+      "key": 2,
+      "imageUrl": "https://turkishonlinemarket.co.uk/image/cache/catalog/0-category/breakfast-400x400.jpg"
+    },
+    {
+      "id": 10003,
+      "name": "Dairy Products",
+      "key": 3,
+      "imageUrl": "https://qph.cf2.quoracdn.net/main-qimg-ea3865ee0b5fece93b4a29810c4ca62f"
+    },
+    {
+      "id": 10004,
+      "name": "Bakery",
+      "key": 4,
+      "imageUrl": "https://bakkalim.co.uk/image/cache/catalog/0-category/bread-400x400.jpg"
+    },
+    {
+      "id": 10005,
+      "name": "Staple Food",
+      "key": 5,
+      "imageUrl": "https://bakkalim.co.uk/image/cache/catalog/0-category/pastas-400x400.jpg"
+    },
+    {
+      "id": 10006,
+      "name": "Snacks",
+      "key": 6,
+      "imageUrl": "https://www.ebiexport.com/foto/acx125.jpg"
+    },
+    {
+      "id": 10007,
+      "name": "Beverages",
+      "key": 7,
+      "imageUrl": "https://bakkalim.co.uk/image/cache/catalog/0-category/cold-drink-400x400.jpg"
+    },
+    {
+      "id": 10008,
+      "name": "Frozen Foods",
+      "key": 8,
+      "imageUrl": "https://turkishonlinemarket.co.uk/image/cache/catalog/0-turkish-online-market/frozen-400x400.jpg"
+    },
+    {
+      "id": 10009,
+      "name": "Desserts",
+      "key": 9,
+      "imageUrl": "https://www.californiastrawberries.com/wp-content/uploads/2019/05/Double-Strawberry-Cupcakes-400x400.jpg"
+    },
+    {
+      "id": 10010,
+      "name": "Paper Products",
+      "key": 10,
+      "imageUrl": "https://medimart.com/wp-content/uploads/2021/04/00026405.jpg"
+    },
+    {
+      "id": 10011,
+      "name": "Pet Supplies",
+      "key": 11,
+      "imageUrl": "https://www.ciftsanplastik.com/wp-content/uploads/2023/06/tv-6-400x400.jpg"
+    }
+  ]
