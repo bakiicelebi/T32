@@ -12,6 +12,7 @@
 - [Usage](#usage)
 - [Mock API with Mockoon](#mock-api-with-mockoon)
 - [API Using](#api-using)
+- [Additional Features](#additional-features)
 - [Screenshots](#screenshots)
 - [Contributing](#contributing)
 - [Communicate](#communication)
@@ -138,12 +139,12 @@ To simulate API responses during development, you can use Mockoon, a tool for qu
 
 ```tsx
 import {API_BASE_URL} from '@env';
-const response = await axios.get(`${API_BASE_URL}`);
+const response = await axios.get(`${API_BASE_URL}/Categories`);
 ```
 
 ## Additional Features
 
-### The project has been enhanced with several additional features to improve user experience.
+The project has been enhanced with several additional features to improve user experience.
 
 - [Custom Animation](#custom-animation)
 - [SSR Provider Solution](#ssr-provider)
@@ -152,50 +153,50 @@ const response = await axios.get(`${API_BASE_URL}`);
 - [TabView Slow Render](#tabview-slow-render)
 
 ### Custom Animation
-  Custom animation have been implemented to enrich the user experience. Adobe After Effects was used to create it.
+
+Custom animation have been implemented to enrich the user experience. Adobe After Effects was used to create it.
+
 - [Lottie React Native](https://github.com/lottie-react-native/lottie-react-native): ^6.7.2
 
 - #### Animation Example
 
-    ![gif-loading](ReadMeImages/animation.gif)
+  ![gif-loading](ReadMeImages/animation.gif)
 
 ---
 
 ### Changes in The Libraries
 
-  - #### SSR Provider
-    
-    [native-base](https://nativebase.io/) : ^3.4.28
+- #### SSR Provider
 
-    1. Navigate to `node_modules/native-base/src/core/NativeBaseProvider.tsx`.
-    2. Delete the `<SSRProvider></SSRProvider>` that wraps `{children}`. Take care not to delete `{children}`.
-    3. Remove the `SSRProvider` import. That is, delete this line: `import { SSRProvider } from '@react-native-aria/utils';`.
-    4. Run `npx patch-package native-base`. Select 'yes' in the prompt.
+  [native-base](https://nativebase.io/) : ^3.4.28
 
-    ---
+  1. Navigate to `node_modules/native-base/src/core/NativeBaseProvider.tsx`.
+  2. Delete the `<SSRProvider></SSRProvider>` that wraps `{children}`. Take care not to delete `{children}`.
+  3. Remove the `SSRProvider` import. That is, delete this line: `import { SSRProvider } from '@react-native-aria/utils';`.
+  4. Run `npx patch-package native-base`. Select 'yes' in the prompt.
 
-  - #### Virtualized List Warning
-    1. Naviagate to `node_modules\@react-native\virtualized-lists\Lists\VirtualizedList.js`
-    2. Comment lines as below
-    3. ![VirtSolution](ReadMeImages/virtSolution.png)
+  ***
 
-    ---
+- #### Virtualized List Warning
 
-  - #### Same Orientation Error
-    - [Used This Solution - Issues on Github](https://github.com/facebook/react-native/issues/31697#issuecomment-1150831275)
+  1. Naviagate to `node_modules\@react-native\virtualized-lists\Lists\VirtualizedList.js`
+  2. Comment lines as below
+  3. ![VirtSolution](ReadMeImages/virtSolution.png)
 
-    ---
+  ***
 
-  - #### TabView Slow Render
-    - [Solved This Solution - Issues on Github](https://github.com/react-navigation/react-navigation/issues/11047#issuecomment-2084429488)
+- #### Same Orientation Error
 
+  - [Used This Solution - Issues on Github](https://github.com/facebook/react-native/issues/31697#issuecomment-1150831275)
 
+  ***
+
+- #### TabView Slow Render
+  - [Solved This Solution - Issues on Github](https://github.com/react-navigation/react-navigation/issues/11047#issuecomment-2084429488)
 
 ## Screenshots
 
 ### _Splash Screen_
-
----
 
 ![Splash Screen](ReadMeImages/splash.png)
 
