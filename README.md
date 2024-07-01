@@ -1,8 +1,7 @@
-
 ![Logo](ReadMeImages/T32_logo.png)
 
-    
-# T32 GROCERY 
+# T32 GROCERY
+
 ## MOBILE CASH REGISTER APPLICATION
 
 - [About the Project](#about-the-project)
@@ -17,12 +16,12 @@
 - [Contributing](#contributing)
 - [Communicate](#communication)
 
-
 ## About the Project
+
 T32 GROCERY is a mobile cash register application designed for grocery stores. It allows users to efficiently manage sales and easily generate sales reports. Additionally, it offers the ability to send reports via email.
 
-
 ## Features
+
 - Handle saling
 - Mock Grocery Data
 - View sales reports
@@ -33,23 +32,25 @@ T32 GROCERY is a mobile cash register application designed for grocery stores. I
 - Local Storing Enable
 
 ## Requirements
+
 - Node.js
 - React Native CLI
 - Android Studio or Xcode (for iOS)
 
 ## Installation
+
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/bakiicelebi/T32.git
-    ```
+   ```bash
+   git clone https://github.com/bakiicelebi/T32.git
+   ```
 2. Navigate to the project directory:
-    ```bash
-    cd T32
-    ```
+   ```bash
+   cd T32
+   ```
 3. Install the necessary packages:
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 ## Libraries and Plugins Used
 
@@ -90,24 +91,28 @@ T32 GROCERY is a mobile cash register application designed for grocery stores. I
 - [react-native-vision-camera](https://github.com/mrousavy/react-native-vision-camera): ^4.0.3
 
 ## Usage
+
 1. To start the application, run:
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
 2. Open the app on an emulator or a physical device:
-    ```bash
-    npx react-native run-android  # for Android
-    npx react-native run-ios      # for iOS
-    ```
+   ```bash
+   npx react-native run-android  # for Android
+   npx react-native run-ios      # for iOS
+   ```
+
 ## Mock API with Mockoon
 
 To simulate API responses during development, you can use Mockoon, a tool for quickly creating mock APIs. Follow these steps to set up a mock API for T32 GROCERY:
 
 1. **Download and Install Mockoon**:
+
    - Download Mockoon from [Mockoon's official website](https://mockoon.com/).
    - Install Mockoon on your machine.
 
 2. **Create a New Mock API**:
+
    - Open Mockoon and click on the "Create a new mock API" button.
    - Define endpoints for your mock API that correspond to your application's backend API endpoints (e.g., `/receipts`, `/categories`, etc.).
    - For each endpoint, define response data in JSON format that resembles the actual data structure you expect from your backend.
@@ -117,9 +122,7 @@ To simulate API responses during development, you can use Mockoon, a tool for qu
 
 - Using mock data inside the project, you can make bodies your endpoints.
 
-
 ### API USING
-
 
 #### API With .env
 
@@ -132,53 +135,119 @@ To simulate API responses during development, you can use Mockoon, a tool for qu
 - EMAIL_PUBLIC_KEY = < your email public key >
 
 #### Example using
-``` tsx
-  import { API_BASE_URL } from '@env';
-  const response = await axios.get(`${API_BASE_URL}`)
+
+```tsx
+import {API_BASE_URL} from '@env';
+const response = await axios.get(`${API_BASE_URL}`);
 ```
+
+## Additional Features
+
+### The project has been enhanced with several additional features to improve user experience.
+
+- [Custom Animation](#custom-animation)
+- [SSR Provider Solution](#ssr-provider)
+- [Virtualized List Warning](#virtualized-list-warning)
+- [Same Orientation Error](#same-orientation-error)
+- [TabView Slow Render](#tabview-slow-render)
+
+### Custom Animation
+  Custom animation have been implemented to enrich the user experience. Adobe After Effects was used to create it.
+- [Lottie React Native](https://github.com/lottie-react-native/lottie-react-native): ^6.7.2
+
+- #### Animation Example
+
+    ![gif-loading](ReadMeImages/animation.gif)
+
+---
+
+### Changes in The Libraries
+
+  - #### SSR Provider
+    
+    [native-base](https://nativebase.io/) : ^3.4.28
+
+    1. Navigate to `node_modules/native-base/src/core/NativeBaseProvider.tsx`.
+    2. Delete the `<SSRProvider></SSRProvider>` that wraps `{children}`. Take care not to delete `{children}`.
+    3. Remove the `SSRProvider` import. That is, delete this line: `import { SSRProvider } from '@react-native-aria/utils';`.
+    4. Run `npx patch-package native-base`. Select 'yes' in the prompt.
+
+    ---
+
+  - #### Virtualized List Warning
+    1. Naviagate to `node_modules\@react-native\virtualized-lists\Lists\VirtualizedList.js`
+    2. Comment lines as below
+    3. ![VirtSolution](ReadMeImages/virtSolution.png)
+
+    ---
+
+  - #### Same Orientation Error
+    - [Used This Solution - Issues on Github](https://github.com/facebook/react-native/issues/31697#issuecomment-1150831275)
+
+    ---
+
+  - #### TabView Slow Render
+    - [Solved This Solution - Issues on Github](https://github.com/react-navigation/react-navigation/issues/11047#issuecomment-2084429488)
+
+
 
 ## Screenshots
 
-### *Splash Screen*
+### _Splash Screen_
+
 ---
+
 ![Splash Screen](ReadMeImages/splash.png)
 
 ---
-### *Login Screen*
+
+### _Login Screen_
+
 ![Login Screen](ReadMeImages/login.png)
 
 ---
-### *Home Screen*
+
+### _Home Screen_
+
 ![Home Screen](ReadMeImages/home.png)
 
 ---
-### *Sales Screen*
+
+### _Sales Screen_
+
 ![Sales Screen](ReadMeImages/sale.png)
 
 ---
-### *Payment Screen*
+
+### _Payment Screen_
+
 ![Payment Screen](ReadMeImages/payment.png)
 
 ---
-### *Reports Screen*
+
+### _Reports Screen_
+
 ![Reports Screen](ReadMeImages/reports.png)
 
 ---
-### *Settings Screen*  
+
+### _Settings Screen_
+
 ![Settings Screen](ReadMeImages/settings.png)
 
 ---
 
-
 ## Contributing
+
 Contributions are welcome! Please follow these steps to contribute:
+
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature/AmazingFeature`).
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
 4. Push to the branch (`git push origin feature/AmazingFeature`).
 5. Open a pull request.
 
-
 ## Communication
+
 For questions and feedback, please contact me at my personal email address:
 bakicelebi23@gmail.com
