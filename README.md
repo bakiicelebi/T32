@@ -135,10 +135,9 @@ To simulate API responses during development, you can use Mockoon, a tool for qu
 - EMAIL_PUBLIC_KEY = < your email public key >
 
 #### Example using
-
-```tsx
-import {API_BASE_URL} from '@env';
-const response = await axios.get(`${API_BASE_URL}`);
+``` tsx
+  import { API_BASE_URL } from '@env';
+  const response = await axios.get(`${API_BASE_URL}/Categories`)
 ```
 
 ## Additional Features
