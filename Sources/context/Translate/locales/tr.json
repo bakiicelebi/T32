@@ -138,6 +138,12 @@
     "Z report request": "Z Raporu İsteği",
     "sure you want to get Z report": "Z Raporu Almak İstediğinize Emin Misiniz?",
     "logging out": "Çıkış Yapılıyor",
-    "sure you want to log out?": "Çıkış Yapmak İstediğinize Emin Misiniz?"
-    
+    "sure you want to log out?": "Çıkış Yapmak İstediğinize Emin Misiniz?",
+    "offline status": "Çevrimdışı",
+    "register is not online": "Kasa Çevrimiçi Değil!",
+    "sync data": "Veri Senkronizasyonu",
+    "sure you want to sync data": "Verilerinizi senkronize etmek istediğinize emin misiniz?",
+    "receipt couldn't posted": "Fiş gönderilemedi. Gönderilemeyenler arasına eklendi.",
+    "favorites":"Favoriler",
+    "data fetching": "Veri Çekiliyor..."
 }

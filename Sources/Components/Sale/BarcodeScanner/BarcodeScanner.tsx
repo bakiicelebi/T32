@@ -81,7 +81,7 @@ function BarcodeScanner({ forPrice }: any) {
         setMatchedProduct(product);
         handlePieceBarcode(codeValue)
       } else {
-        Alert.alert(t('no matching product found'));
+        Alert.alert(t('product not found in the inventory'));
       }
     }
   }, [codeValue, scannable]);
@@ -140,7 +140,7 @@ function BarcodeScanner({ forPrice }: any) {
         <Box flex={1} right={0} bottom={0} position={"absolute"}>
           {!forPrice && <InputWithNumberPad />}
         </Box>
-        {matchedProduct && <Box borderRadius={15} alignSelf={"center"} bottom={0} width={layout.width / 2.5} height={layout.height / 5} position={"absolute"}>
+        {matchedProduct && <Box bottom={0} position={"absolute"}>
           <ProductCard setLoading={setLoading} item={matchedProduct} />
         </Box>}
       </Box>

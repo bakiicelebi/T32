@@ -6,6 +6,7 @@ import { useData } from "../../../context/DataContext";
 import { useCartContext } from "../../../context/CartContext";
 import { ActivityIndicator, useWindowDimensions } from "react-native";
 import { useTranslation } from "react-i18next";
+import { useSaleContext } from "../../../context/SaleContext";
 
 const CartCards = ({ setDiscountPrices, setPrices, item, type, handleDeleting, cartPrices }: any) => {
     const [productPrice, setProductPrice] = useState(0);
@@ -15,6 +16,7 @@ const CartCards = ({ setDiscountPrices, setPrices, item, type, handleDeleting, c
     const { products } = useData();
     const { isDiscountApplied, piece, pieceBarcode, handlePieceBarcode, handlePiece } = useCartContext()
     const layout = useWindowDimensions()
+    const { selectedSale } = useSaleContext()
 
     const { t, i18n } = useTranslation()
 
@@ -28,7 +30,7 @@ const CartCards = ({ setDiscountPrices, setPrices, item, type, handleDeleting, c
 
     useEffect(() => {
         if (product) {
-            if (type === "payment" && cartPrices) {
+            if (cartPrices) {
                 const matchedCartPrice = cartPrices.find((price: any) => price.Barcode === item);
                 if (matchedCartPrice) {
                     setProductCount(matchedCartPrice.Price / product.Price);

@@ -8,7 +8,7 @@
     "register no": "Kasse Nr",
     "shop": "Geschäft",
     "version": "Ausführung",
-    "sale number": "Anzahl der Verkäufe",
+    "sale number": "Verkaufszahl",
     "return": "Rückgabe",
     "products": "Produkte",
     "all products": "Alle Produkte",
@@ -138,7 +138,14 @@
     "Z report request": "Z-Berichtsanfrage",
     "sure you want to get Z report": "Sind Sie sicher, dass Sie einen Z-Bericht erhalten möchten?",
     "logging out": "Abmeldung",
-    "sure you want to log out?": "Sind Sie sicher, dass Sie sich abmelden möchten ?"
+    "sure you want to log out?": "Sind Sie sicher, dass Sie sich abmelden möchten ?",
+    "offline status": "Offline-Status",
+    "register is not online": "Registrierung ist nicht online!",
+    "sync data": "Daten synchronisieren",
+    "sure you want to sync data": "Sind Sie sicher, dass Sie Daten synchronisieren möchten?",
+    "receipt couldn't posted": "Beleg konnte nicht gesendet werden. Beleg zu nicht gesendeten Belegen hinzugefügt.",
+    "favorites":"Favoriten",
+    "data fetching": "Datenabruf..."
 }
 
 

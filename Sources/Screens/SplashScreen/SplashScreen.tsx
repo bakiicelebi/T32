@@ -13,7 +13,7 @@ const SplashScreen = () => {
         const timer = setTimeout(() => {
             //@ts-ignore
             navigation.replace('LogInScreen');
-        }, 4000);
+        }, 3000);
 
         return () => clearTimeout(timer);
     }, [navigation]);

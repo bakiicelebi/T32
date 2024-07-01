@@ -9,6 +9,7 @@ import CampaignsSlider from "../../Components/Home/CampaignsSlider";
 import BarcodeScreen from "../../Components/Sale/BarcodeScreen";
 import { FlatList, useWindowDimensions } from "react-native";
 import CustomModal from "../../Components/Payment/CustomModal";
+import { BackHandler, ToastAndroid } from 'react-native';
 import { useTranslation } from "react-i18next";
 
 
@@ -19,6 +20,28 @@ const HomeScreen = ({ navigation, route }: any) => {
 
     const height = useWindowDimensions().height
     const { t, i18n } = useTranslation()
+
+    const [backClickCount, setBackClickCount] = useState(0);
+
+    useEffect(() => {
+        const backAction = () => {
+            if (backClickCount === 1) {
+                BackHandler.exitApp();
+            } else {
+                ToastAndroid.show('Press back again to exit', ToastAndroid.SHORT);
+                setBackClickCount(1);
+                setTimeout(() => setBackClickCount(0), 2000); // 2 seconds to reset backClickCount
+                return true;
+            }
+        };
+
+        const backHandler = BackHandler.addEventListener(
+            'hardwareBackPress',
+            backAction
+        );
+
+        return () => backHandler.remove();
+    }, [backClickCount]);
 
     const { wrongAttempts } = route.params || { wrongAttempts: [] };
 

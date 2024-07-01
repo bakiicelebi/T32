@@ -25,11 +25,12 @@ const AllProductsScreen = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const { products, favorites }: any = useData();
   const [param, setParam] = useState(false)
+  const [notEnd, setNotEnd] = useState(true)
 
   const originalData = React.useRef([]);
   const route = useRoute()
   const { colorMode } = useColorMode()
-  const {t,i18n}= useTranslation()
+  const { t, i18n } = useTranslation()
 
   useEffect(() => {
     //@ts-ignore
@@ -78,6 +79,7 @@ const AllProductsScreen = () => {
         sortedData = filteredData;
     }
     setData(sortedData);
+    setNotEnd(true)
   };
 
   const cycleSortState = () => {
@@ -92,7 +94,7 @@ const AllProductsScreen = () => {
 
   const renderItem = useCallback(({ item }: any) => renderProducts({ item }), [data]);
 
-  const renderSkeleton = () => (<VStack  w="25%" margin={5} maxW="25%" borderWidth="1" space={8} overflow="hidden" rounded="md" _dark={{
+  const renderSkeleton = () => (<VStack w="25%" margin={5} maxW="25%" borderWidth="1" space={8} overflow="hidden" rounded="md" _dark={{
     borderColor: "coolGray.600"
   }} _light={{
     borderColor: "coolGray.300"
@@ -104,12 +106,12 @@ const AllProductsScreen = () => {
 
   if (loading) {
     return (
-      <Box 
-      _dark={{
-        bg: "#141615"
-      }} _light={{
-        bg: "#eff3f6"
-      }}
+      <Box
+        _dark={{
+          bg: "#141615"
+        }} _light={{
+          bg: "#eff3f6"
+        }}
       >
         <FlatList numColumns={3} data={[1, 2, 3, 4, 5, 6, 7, 8, 9]} renderItem={renderSkeleton} />
 
@@ -138,9 +140,9 @@ const AllProductsScreen = () => {
               <Icon name="heart-outline" size={25} color={colorMode === "dark" ? "#7f8183" : "black"} onPress={handleFavorites} />
             )}
             <Button variant={'outline'} onPress={cycleSortState}>
-              {sortState === 0 && <HStack alignItems={"center"}><Text fontSize={20}>A-Z </Text><Icon size={20} name='arrow-down' color={colorMode==="dark"? "#7f8183": "black"} /></HStack>}
-              {sortState === 1 && <HStack alignItems={"center"}><Text fontSize={20}>Z-A </Text><Icon size={20} name='arrow-down' color={colorMode==="dark"? "#7f8183": "black"} /></HStack>}
-              {sortState === 2 && <HStack alignItems={"center"}><Text fontSize={20}>{t('default')} </Text><Icon size={20} name='arrow-down' color={colorMode==="dark"? "#7f8183": "black"} /></HStack>}
+              {sortState === 0 && <HStack alignItems={"center"}><Text fontSize={20}>A-Z </Text><Icon size={20} name='arrow-down' color={colorMode === "dark" ? "#7f8183" : "black"} /></HStack>}
+              {sortState === 1 && <HStack alignItems={"center"}><Text fontSize={20}>Z-A </Text><Icon size={20} name='arrow-down' color={colorMode === "dark" ? "#7f8183" : "black"} /></HStack>}
+              {sortState === 2 && <HStack alignItems={"center"}><Text fontSize={20}>{t('default')} </Text><Icon size={20} name='arrow-down' color={colorMode === "dark" ? "#7f8183" : "black"} /></HStack>}
             </Button>
           </HStack>
         </HStack>
@@ -163,6 +165,10 @@ const AllProductsScreen = () => {
           maxToRenderPerBatch={30}
           windowSize={15}
           removeClippedSubviews={true}
+          onEndReached={() => setNotEnd(false)}
+          ListFooterComponent={() => <Box>
+            {notEnd && <ActivityIndicator color={colorMode==="dark"? "#7f8183": "black"} size={25} style={{ paddingBottom: 10 }} />}
+          </Box>}
         />
       </Box>
       {param && <BottomBar />}

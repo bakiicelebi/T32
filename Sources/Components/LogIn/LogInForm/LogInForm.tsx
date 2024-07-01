@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Heading, VStack, Input, Center, Pressable } from 'native-base'
+import { Box, Heading, VStack, Input, Center, Pressable, useColorMode } from 'native-base'
 import NumberPad from '../../Sale/NumberPad'
 import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 import { useTranslation } from 'react-i18next'
@@ -8,6 +8,10 @@ const LogInForm = (props: any) => {
     const [isCodeActive, setActiveField] = useState(true)
     const { t, i18n } = useTranslation();
     const [showPassword, setShowPassword] = useState(false)
+
+    const {
+        colorMode
+    } = useColorMode()
 
     const handleNumberPadPress = (value: string) => {
         if (value === 'X') {
@@ -75,7 +79,7 @@ const LogInForm = (props: any) => {
                         value={props.password}
                         editable={false}
                         selectTextOnFocus={false}
-                        InputRightElement={<Icon style={{ paddingRight: 8 }} name={showPassword ? 'eye-off' : 'eye'} size={25} onPress={() => setShowPassword(!showPassword)} />}
+                        InputRightElement={<Icon style={{ paddingRight: 8 }} color={colorMode==="dark"? "#7f8183": "black"} name={showPassword ? 'eye-off' : 'eye'} size={25} onPress={() => setShowPassword(!showPassword)} />}
                         onChangeText={text => props.setPassword(text)}
                     />
                 </Pressable>

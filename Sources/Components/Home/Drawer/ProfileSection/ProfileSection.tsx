@@ -56,6 +56,25 @@ const ProfileSection = (props: any) => {
             </Box>
         )
     }
+    {/**<View style={{ borderRadius: 10, borderWidth: 2, flex: 1, flexDirection: "row", alignItems: "center" }}>
+            {!props.menuOpen && props.fullyClosed && <View style={{ flex: 1, justifyContent: "flex-start" }} >
+                <Text numberOfLines={1} style={{ textAlign: "center", fontSize: 40, color: "black", backgroundColor: "yellow", padding: 5, borderRadius: 50 }}> {firstLetter} </Text>
+            </View>}
+            {props.menuOpen && <View style={{ justifyContent: "flex-start" }} >
+                <Text numberOfLines={1} style={{ textAlign: "center", fontSize: 40, color: "black", backgroundColor: "yellow", padding: 5, borderRadius: 50 }}> {firstLetter} </Text>
+            </View>}
+            {!props.menuOpen && !props.fullyClosed && <View style={{ justifyContent: "flex-start" }} >
+                <Text numberOfLines={1} style={{ textAlign: "center", fontSize: 40, color: "black", backgroundColor: "yellow", padding: 5, borderRadius: 50 }}> {firstLetter} </Text>
+            </View>
+            }
+            {showFirstWord && !props.menuOpen && !props.fullyClosed && <View style={{ flex: 1, justifyContent: "flex-end" }}>
+                <Text style={{ fontSize: 25, color: "black" }} numberOfLines={1} ellipsizeMode='tail'>   {firstWord}</Text>
+            </View>
+            }
+            {props.menuOpen && <View style={{ flex: 1, justifyContent: "flex-end" }}>
+                <Text style={{ fontSize: 25, color: "black" }} numberOfLines={1} ellipsizeMode='tail'>   {firstWord}</Text>
+            </View>}
+        </View> */}
 
     return (
         <Box borderRadius={20} mt={4} flex={1} flexDirection={"row"} alignItems={"center"} >
@@ -65,6 +84,7 @@ const ProfileSection = (props: any) => {
             {showFirstWord && !props.menuOpen && !props.fullyClosed && <UserName />}
             {props.menuOpen && <UserName />}
         </Box>
+        
     );
 }
 

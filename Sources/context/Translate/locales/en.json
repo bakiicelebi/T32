@@ -131,12 +131,19 @@
     "campaigns list": "Campaigns List",
     "no receipts": "No Receipts",
     "save as pdf": "Save as PDF",
-    "campaign removed":"Campaign Removed",
-    "campaign applied":"Campaign Applied",
+    "campaign removed": "Campaign Removed",
+    "campaign applied": "Campaign Applied",
     "fingerprint error": "Fingerprint is Wrong",
-    "wrong attempts":"Wrong Attempts",
+    "wrong attempts": "Wrong Attempts",
     "Z report request": "Z Report Request",
     "sure you want to get Z report": "Sure You Want to Get Z Report?",
     "logging out": "Logging Out",
-    "sure you want to log out?": "Sure You Want To Log Out?"
+    "sure you want to log out?": "Sure You Want To Log Out?",
+    "offline status": "Offline Status",
+    "register is not online": "Register is not Online!",
+    "sync data": "Sync Data",
+    "sure you want to sync data": "Sure You Want to Sync Data?",
+    "receipt couldn't posted": "Receipt couldn't posted. Receipt added unsent receipts",
+    "favorites":"Favorites",
+    "data fetching": "Data Fetching..."
 }

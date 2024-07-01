@@ -62,7 +62,9 @@ const ProductCard = memo(
       if (isFavorited) {
         removeFavorite(item); // Assuming removeFavorite exists in your useData hook
         console.log(item.ProductName + " is removed from Favorites")
-        setIsFavoritesDisplay(false)
+        if (setIsFavoritesDisplay) {
+          setIsFavoritesDisplay(false)
+        }
       } else {
         addFavorite(item); // Assuming addFavorite exists in your useData hook
         console.log(item.ProductName + " is added to Favorites")
@@ -78,7 +80,7 @@ const ProductCard = memo(
 
     return (
       <>
-        <Pressable onTouchStart={handleLoading} justifyContent={"center"} alignItems={"center"} flex={1} m={6} onLongPress={handleFavorites} onPress={handleAdding}>
+        <Pressable onTouchStart={handleLoading} onTouchMove={() => setLoading(false)} onTouchCancel={() => setLoading(false)} justifyContent={"center"} alignItems={"center"} flex={1} m={6} onLongPress={handleFavorites} onPress={handleAdding}>
           <Box _dark={{
             bg: "#1e1f21",
             borderColor: "#515557",

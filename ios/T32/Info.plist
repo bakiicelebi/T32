@@ -47,13 +47,13 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>NFCReaderUsageDescription</key>
+	<!-- <key>NFCReaderUsageDescription</key>
    	<string>Uygulama NFC etiketlerini okumak icin kullanilacak.</string>
 	<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
 	<array>
 		<string>D2760000850100</string>
 		<string>D2760000850101</string>
-	</array>
+	</array> -->
 	<key>NSCameraUsageDescription</key>
 	<string>$(PRODUCT_NAME) needs access to your Camera.</string>
 	<key>NSMicrophoneUsageDescription</key>

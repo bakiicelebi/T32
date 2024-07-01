@@ -19,6 +19,7 @@ interface CartContextType {
     addCart4: (newProduct: any) => Promise<void>;
     addCart5: (newProduct: any) => Promise<void>;
     removeCart: (cartNo: number, removeProduct: any) => Promise<void>;
+    refreshCart: (cartNo: number, newArray: any) => Promise<void>;
 }
 
 const defaultValue: CartContextType = {
@@ -40,6 +41,7 @@ const defaultValue: CartContextType = {
     addCart4: async () => { },
     addCart5: async () => { },
     removeCart: async () => { },
+    refreshCart: async (cartNo: number, newArray: any) => { },
 };
 
 const CartContext = createContext<CartContextType | undefined>(defaultValue);
@@ -113,6 +115,29 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
         }
     };
 
+    const refreshCart = async (cartNo: number, newArray: any) => {
+        switch (cartNo) {
+            case 1:
+                setCart1(newArray);
+                break;
+            case 2:
+                setCart2(newArray);
+                break;
+            case 3:
+                setCart3(newArray);
+                break;
+            case 4:
+                setCart4(newArray);
+                break;
+            case 5:
+                setCart5(newArray);
+                break;
+            default:
+                console.log("invalid cart no");
+                break;
+        }
+    };
+
     const clearCart = async (cartNo: number) => {
         if (cartNo === 1) setCart1([]);
         if (cartNo === 2) setCart2([]);
@@ -122,7 +147,7 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
     };
 
     return (
-        <CartContext.Provider value={{ cart1, cart2, cart3, cart4, cart5, isDiscountApplied, discountInvert, removeCart, addCart1, addCart2, addCart3, addCart4, addCart5, clearCart, piece, handlePiece, handlePieceBarcode, pieceBarcode }}>
+        <CartContext.Provider value={{ cart1, cart2, cart3, cart4, cart5, isDiscountApplied, discountInvert, removeCart, addCart1, addCart2, addCart3, addCart4, addCart5, clearCart, piece, handlePiece, handlePieceBarcode, pieceBarcode,refreshCart }}>
             {children}
         </CartContext.Provider>
     );

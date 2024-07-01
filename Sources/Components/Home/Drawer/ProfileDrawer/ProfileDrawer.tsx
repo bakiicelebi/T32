@@ -52,11 +52,11 @@ const ProfileDrawer = ({ navigation }: any) => {
 
         Alert.alert(t('logging out'), t('sure you want to log out?'), [
             {
-                text: 'Cancel',
+                text: t('cancel'),
                 onPress: () => console.log('Cancel Pressed'),
                 style: 'cancel',
             },
-            { text: 'YES', onPress: () => yesPressed() },
+            { text: t('confirm'), onPress: () => yesPressed() },
         ]);
 
         const yesPressed = async () => {
@@ -64,7 +64,7 @@ const ProfileDrawer = ({ navigation }: any) => {
             try {
                 await AsyncStorage.removeItem('userData');
                 removeUser()
-                console.log("cikis Yapildi")
+                console.log("logged out")
                 navigation.navigate("LogInScreen")
             } catch (error) {
                 console.log('Error logging out: ', error);
@@ -104,12 +104,14 @@ const ProfileDrawer = ({ navigation }: any) => {
                         <Box flex={.3} >
                             <ProfileSection fullyClosed={fullyClosed} user={inUser} menuOpen={isMenuOpen} />
                         </Box>
-                        <Box flex={1} justifyContent={"center"}>
+                        <Box flex={1} pl={5} alignItems={"flex-start"} justifyContent={"center"}>
                             <MenuButtons disabled={!isMenuOpen} onPress={handleAccount} icon="account" title={"account"} />
                             <MenuButtons disabled={!isMenuOpen} onPress={handleReports} icon="poll" title={"reports"} />
                             <MenuButtons disabled={!isMenuOpen} onPress={handleSettings} icon="cog" title={"settings"} />
                         </Box>
-                        <MenuButtons disabled={!isMenuOpen} onPress={handleLogout} icon="logout" title={"log out"} />
+                        <Box pl={5} alignItems={"flex-start"}>
+                            <MenuButtons disabled={!isMenuOpen} onPress={handleLogout} icon="logout" title={"log out"} />
+                        </Box>
                     </Box>
                 </Animated.View>
 

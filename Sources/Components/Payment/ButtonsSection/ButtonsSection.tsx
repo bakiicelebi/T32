@@ -12,7 +12,7 @@ const ButtonsSection = (props: any) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handlePress = (buttonName: string) => {
-        // burayı çeviride dinamikleştir
+        
         if (buttonName === "request e-bill") {
             setIsModalOpen(true)
         }

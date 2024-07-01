@@ -8,6 +8,7 @@ import { useData } from '../../context/DataContext';
 import { useMarket } from '../../context/MarketContext'; // Make sure this is the correct path
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
+import BottomBar from '../../Components/GeneralComponents/BottomBar';
 
 const images: any = {
     en: require('../../assets/Images/Login_en.png'),
@@ -21,6 +22,7 @@ const LogInScreen = ({ navigation }: any) => {
     const [loading, setLoading] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [loginFailed, setLoginFailed] = useState(false);
+    const [waitForImage, setWaitForImage] = useState(false);
     const [wrongAttempts, setWrongAttempts] = useState<any[]>([])
     const [lang, setLang] = useState("")
     const imageSource = images[lang];
@@ -34,6 +36,10 @@ const LogInScreen = ({ navigation }: any) => {
 
     useEffect(() => {
         checkLoggedIn();
+        setTimeout(() => {
+            setWaitForImage(true)
+        }, 500);
+        console.log("a")
     }, []);
 
     useEffect(() => {
@@ -45,7 +51,7 @@ const LogInScreen = ({ navigation }: any) => {
     }, [isLoggedIn]);
 
     useEffect(() => {
-            setLang(i18next.language)
+        setLang(i18next.language)
 
     }, [i18next.language])
 
@@ -128,28 +134,31 @@ const LogInScreen = ({ navigation }: any) => {
     };
 
     return (
-        <Box _dark={{ bg: "#141615" }} _light={{ bg: "#eff3f6" }} flex={1}>
-            <DismissKeyboard>
-                <HStack flex={1}>
-                    <Box alignItems={"center"} justifyContent={"center"} flex={1}>
-                        <Center>
-                            {lang.length && <Image resizeMode='contain' w={500} h={500} alt='LoginPng' source={imageSource} />}
+        <Box flex={1}>
+            <Box _dark={{ bg: "#141615" }} _light={{ bg: "#eff3f6" }} flex={1}>
+                <DismissKeyboard>
+                    <HStack flex={1}>
+                        <Box alignItems={"center"} justifyContent={"center"} flex={1}>
+                            <Center>
+                                {lang.length && waitForImage && <Image resizeMode='contain' w={500} h={500} alt='LoginPng' source={imageSource} />}
+                            </Center>
+                        </Box>
+                        <Center flex={1} w="100%">
+                            <LogInForm
+                                handleWrongLogIn={handleWrongLogIn}
+                                userCode={userCode}
+                                password={password}
+                                setuserCode={setuserCode}
+                                setPassword={setPassword}
+                                handleLogin={handleLogin}
+                                loading={loading}
+                                loginFailed={loginFailed}
+                            />
                         </Center>
-                    </Box>
-                    <Center flex={1} w="100%">
-                        <LogInForm
-                            handleWrongLogIn={handleWrongLogIn}
-                            userCode={userCode}
-                            password={password}
-                            setuserCode={setuserCode}
-                            setPassword={setPassword}
-                            handleLogin={handleLogin}
-                            loading={loading}
-                            loginFailed={loginFailed}
-                        />
-                    </Center>
-                </HStack>
-            </DismissKeyboard>
+                    </HStack>
+                </DismissKeyboard>
+            </Box>
+            <BottomBar/>
         </Box>
     );
 };

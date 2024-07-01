@@ -15,14 +15,14 @@ const Campaigns = ({ isOpen, onClose }: any) => {
             discountInvert()
             console.log("discount removed")
             toast.show({
-                description: t('discount removed')
+                description: t('campaign removed')
             })
         }
         else {
             discountInvert()
             console.log("discountApplied")
             toast.show({
-                description: t('discount applied')
+                description: t('campaign applied')
             })
         }
 

@@ -31,6 +31,7 @@ const Cart = () => {
 
     const { t, i18n } = useTranslation()
 
+
     useEffect(() => {
         if (data.length) {
             setIsDisabledCancellation(false)
@@ -43,7 +44,12 @@ const Cart = () => {
     }, [data])
 
     useEffect(() => {
+        setData([])
+        setPrices([])
+        setDiscountPrices([])
+    }, [selectedSale])
 
+    useEffect(() => {
         const disc = discountPrices.reduce((acc, curr) => acc + curr.Price, 0);
         setCartDiscount(parseFloat(disc.toFixed(2)));
         const newGeneral = cartTotal - cartDiscount;
@@ -60,7 +66,7 @@ const Cart = () => {
     useEffect(() => {
         const total = prices.reduce((acc, curr) => acc + curr.Price, 0);
         setCartTotal(parseFloat(total.toFixed(2)));
-    }, [prices]);
+    }, [prices, selectedSale]);
 
     useEffect(() => {
         setCartNo(openTabs[selectedSale - 1]);
@@ -136,8 +142,6 @@ const Cart = () => {
                 },
             ])
         }
-
-
 
     };
 

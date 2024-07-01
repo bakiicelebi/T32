@@ -334,31 +334,31 @@ const PaymentFinalize = (prop: any) => {
                     <Divider borderColor={"#7f8183"} thickness="3" orientation="horizontal" />
                     <HStack flex={1} justifyContent={"space-between"}>
                         <Text fontSize={"xl"}>{t('cash')} {t('paying')}: </Text>
-                        <Text fontSize={"xl"}>{cashPaying} ₺</Text>
+                        <Text fontSize={"xl"}>{parseFloat(cashPaying).toFixed(2)} ₺</Text>
                         {cashPaid !== "0" && <HStack>
                             <Text fontSize={"xl"}>{t('paid')}: </Text>
-                            <Text fontSize={"xl"}>{cashPaid} ₺</Text>
+                            <Text fontSize={"xl"}>{parseFloat(cashPaid).toFixed(2)} ₺</Text>
                         </HStack>}
                     </HStack>
                     <HStack flex={1} justifyContent={"space-between"}>
                         <Text fontSize={"xl"}>{t('card')} {t('paying')}: </Text>
-                        <Text fontSize={"xl"}>{cardPaying} ₺</Text>
+                        <Text fontSize={"xl"}>{parseFloat(cardPaying).toFixed(2)} ₺</Text>
                         {cardPaid !== "0" && <HStack>
                             <Text fontSize={"xl"}>{t('paid')}: </Text>
-                            <Text fontSize={"xl"}>{cardPaid} ₺</Text>
+                            <Text fontSize={"xl"}>{parseFloat(cardPaid).toFixed(2)} ₺</Text>
                         </HStack>}
                     </HStack>
                     {change !== "0" && <HStack flex={1} justifyContent={"space-between"}>
-                        <Text fontSize={"xl"}>{t('change')}: </Text>
-                        <Text fontSize={"xl"}>{change} ₺</Text>
+                        <Text fontSize={"xl"}>{t('change given')}: </Text>
+                        <Text fontSize={"xl"}>{parseFloat(change).toFixed(2)} ₺</Text>
                     </HStack>}
                     <HStack flex={1} justifyContent={"space-between"}>
                         <Text fontSize={"xl"}>{t('total')} {t('paid')}: </Text>
-                        <Text fontSize={"xl"}>{totalPaid} ₺</Text>
+                        <Text fontSize={"xl"}>{parseFloat(totalPaid).toFixed(2)} ₺</Text>
                     </HStack>
                     <HStack flex={1} justifyContent={"space-between"}>
                         <Text fontSize={"xl"}>{t('remaining')} {t('payment')}: </Text>
-                        <Text fontSize={"xl"}>{remaining} ₺</Text>
+                        <Text fontSize={"xl"}>{parseFloat(remaining).toFixed(2)} ₺</Text>
                     </HStack>
                 </VStack>
             </VStack>

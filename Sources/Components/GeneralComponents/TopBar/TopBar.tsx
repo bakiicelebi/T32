@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Pressable } from 'react-native'
+import { Alert, Pressable } from 'react-native'
 import { Box, HStack, Image, Menu, Modal, Text, useColorMode } from 'native-base'
 import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 import Icon2 from "react-native-vector-icons/MaterialIcons"
@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import i18next from 'i18next'
 import LogoLoading from '../LottieComponents/LogoLoading'
+import { useMarket } from '../../../context/MarketContext'
 
 const TopBar = () => {
 
@@ -22,6 +23,7 @@ const TopBar = () => {
 
 
     const { t, i18n } = useTranslation();
+    const { serverStatus } = useMarket()
 
     const route = useRoute()
 
@@ -29,7 +31,7 @@ const TopBar = () => {
         if (route.name === "HomeScreen") {
             setIsDisabled(false)
         }
-        else{
+        else {
             setIsDisabled(true)
         }
     }, [route.name])
@@ -73,9 +75,30 @@ const TopBar = () => {
     }
 
     const handleFetch = async () => {
-        setLoading2(true)
-        await fetchDatas().then(() => setLoading2(false))
-        console.log("Updated Data")
+        
+
+        if (!serverStatus) {
+            Alert.alert(t('offline status'), t('register is not online'))
+        }
+        else {
+            Alert.alert(t('sync data'), t('sure you want to sync data'), [
+                {
+                    text: t('cancel'),
+                    onPress: () => { console.log('Cancel Pressed'); },
+                    style: 'cancel',
+                },
+                {
+                    text: 'OK', onPress: async () => {
+                        setLoading2(true)
+                        setIsDisabled(true)
+                        //@ts-ignore
+                        await fetchDatas().then(() => {setLoading2(false);setIsDisabled(false)})
+                        console.log("Updated Data")
+                    }
+                },
+            ])
+        }
+
     }
 
     const fetchDatas = async () => {
@@ -146,9 +169,9 @@ const TopBar = () => {
                     bg: "#1e1f21"
                 }} _light={{
                     bg: "#ffffff"
-                }} w={100} h={100}>
+                }} w={120} h={120}>
                     <LogoLoading />
-                    <Text>Data Fetching...</Text>
+                    <Text pl={3}>{t('data fetching')}</Text>
                 </Box>
             </Modal>
         </>

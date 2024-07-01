@@ -1,17 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box, HStack, Text, useColorMode } from 'native-base'
 import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 import { useMarket } from '../../../context/MarketContext'
 import packageJson from '../../../../package.json';
 import { useData } from '../../../context/DataContext';
 import { useTranslation } from 'react-i18next';
+import { useRoute } from '@react-navigation/native';
 
 const BottomBar = () => {
+
+    const [enableCashier, setEnableCashier] = useState(true)
+
     const { serverStatus } = useMarket()
     const { inUser }: any = useData()
     const { t, i18n } = useTranslation();
 
     const { colorMode } = useColorMode()
+    const route = useRoute()
+
+    useEffect(() => {
+        if (route.name === "LogInScreen") {
+            setEnableCashier(false)
+        }
+        else {
+            setEnableCashier(true)
+        }
+    }, [route.name])
 
     return (
         <Box _dark={{
@@ -36,10 +50,10 @@ const BottomBar = () => {
                     <Icon name='publish' size={25} color={colorMode === "dark" ? "#7f8183" : "black"} />
                     <Text fontSize={"2xl"}>  {t('version')}: {packageJson.version}</Text>
                 </HStack>
-                <HStack alignItems={"center"}>
+                {enableCashier && <HStack alignItems={"center"}>
                     <Icon name='account' size={25} color={colorMode === "dark" ? "#7f8183" : "black"} />
                     <Text fontSize={"2xl"}>   {t('cashier')}: {inUser?.name ?? "Anonymus"} {inUser?.surname ?? "Anonymus"}</Text>
-                </HStack>
+                </HStack>}
             </HStack>
         </Box>
     )

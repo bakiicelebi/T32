@@ -61,11 +61,11 @@ const MarketProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
         }));
 
         try {
-            await axios.post(`${API_BASE_URL}receipts`, receipt, { timeout: 3000 });
+            await axios.post(`${API_BASE_URL}receipts`, {data: receipt}, { timeout: 3000 });
             console.log("Receipt Posted Successfully")
         } catch (error) {
             console.log("Receipt Couldn't Posted. Receipt Added Unsent Receipts")
-            Alert.alert("Receipt Synchronization", "Receipt Couldn't Posted. Receipt Added Unsent Receipts")
+            Alert.alert("synchronization receipts", "receipt couldn't posted")
             const newUnsentReceipts = [...unsentReceipts, receipt];
             setUnsentReceipts(newUnsentReceipts);
             await AsyncStorage.setItem('unsentReceipts', JSON.stringify(newUnsentReceipts));

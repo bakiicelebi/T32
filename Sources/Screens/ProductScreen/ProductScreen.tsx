@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { useWindowDimensions } from 'react-native';
+import { ActivityIndicator, useWindowDimensions } from 'react-native';
 import { Box, HStack, Text, VStack, Skeleton, useColorMode, FlatList } from 'native-base';
 import { TabView, TabBar } from 'react-native-tab-view';
 import { useRoute } from '@react-navigation/native';
@@ -76,8 +76,10 @@ const CategoryProductList = ({ routeKey }: any) => {
     const [data, setData] = useState<any[]>([]);
     const { products } = useData();
     const [loading, setLoading] = useState(true);
+    const [notEnd, setNotEnd] = useState(true)
 
-    const {t,i18n}= useTranslation()
+    const { t, i18n } = useTranslation()
+    const { colorMode } = useColorMode()
 
     const filterProducts = (products: any[], categoryId: any) => {
         return products.filter(product => product.CategoryId === parseInt(categoryId));
@@ -139,6 +141,10 @@ const CategoryProductList = ({ routeKey }: any) => {
                 windowSize={15}
                 centerContent={true}
                 removeClippedSubviews={true}
+                onEndReached={() => setNotEnd(false)}
+                ListFooterComponent={() => <Box>
+                    {notEnd && <ActivityIndicator color={colorMode === "dark" ? "#7f8183" : "black"} size={25} style={{ paddingBottom: 10 }} />}
+                </Box>}
             />
         </Box>
     );
