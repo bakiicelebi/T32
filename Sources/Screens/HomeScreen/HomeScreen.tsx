@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import ListBase from "../../Components/Home/Menu/ListBase";
 import ProfileDrawer from "../../Components/Home/Drawer/ProfileDrawer";
 import { Box, HStack, VStack, Text } from "native-base";
@@ -11,6 +11,7 @@ import { FlatList, useWindowDimensions } from "react-native";
 import CustomModal from "../../Components/Payment/CustomModal";
 import { BackHandler, ToastAndroid } from 'react-native';
 import { useTranslation } from "react-i18next";
+import { useFocusEffect } from '@react-navigation/native';
 
 
 const HomeScreen = ({ navigation, route }: any) => {
@@ -23,25 +24,27 @@ const HomeScreen = ({ navigation, route }: any) => {
 
     const [backClickCount, setBackClickCount] = useState(0);
 
-    useEffect(() => {
-        const backAction = () => {
-            if (backClickCount === 1) {
-                BackHandler.exitApp();
-            } else {
-                ToastAndroid.show('Press back again to exit', ToastAndroid.SHORT);
-                setBackClickCount(1);
-                setTimeout(() => setBackClickCount(0), 2000); // 2 seconds to reset backClickCount
-                return true;
-            }
-        };
+    useFocusEffect(
+        useCallback(() => {
+            const backAction = () => {
+                if (backClickCount === 1) {
+                    BackHandler.exitApp();
+                } else {
+                    ToastAndroid.show('Press back again to exit', ToastAndroid.SHORT);
+                    setBackClickCount(1);
+                    setTimeout(() => setBackClickCount(0), 1500); // 2 seconds to reset backClickCount
+                    return true;
+                }
+            };
 
-        const backHandler = BackHandler.addEventListener(
-            'hardwareBackPress',
-            backAction
-        );
+            const backHandler = BackHandler.addEventListener(
+                'hardwareBackPress',
+                backAction
+            );
 
-        return () => backHandler.remove();
-    }, [backClickCount]);
+            return () => backHandler.remove();
+        }, [backClickCount])
+    );
 
     const { wrongAttempts } = route.params || { wrongAttempts: [] };
 

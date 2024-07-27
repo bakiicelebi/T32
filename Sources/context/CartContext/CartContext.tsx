@@ -118,25 +118,26 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
     const refreshCart = async (cartNo: number, newArray: any) => {
         switch (cartNo) {
             case 1:
-                setCart1(newArray);
+                setCart1((prevArray) => [...prevArray, ...newArray]);
                 break;
             case 2:
-                setCart2(newArray);
+                setCart2((prevArray) => [...prevArray, ...newArray]);
                 break;
             case 3:
-                setCart3(newArray);
+                setCart3((prevArray) => [...prevArray, ...newArray]);
                 break;
             case 4:
-                setCart4(newArray);
+                setCart4((prevArray) => [...prevArray, ...newArray]);
                 break;
             case 5:
-                setCart5(newArray);
+                setCart5((prevArray) => [...prevArray, ...newArray]);
                 break;
             default:
                 console.log("invalid cart no");
                 break;
         }
     };
+    
 
     const clearCart = async (cartNo: number) => {
         if (cartNo === 1) setCart1([]);

@@ -37,6 +37,7 @@ const CartCards = ({ setDiscountPrices, setPrices, item, type, handleDeleting, c
                 }
             }
         }
+        
     }, [cartPrices, type, item, product]);
 
     useEffect(() => {
@@ -74,7 +75,7 @@ const CartCards = ({ setDiscountPrices, setPrices, item, type, handleDeleting, c
         if (products && item) {
             const matchedProduct = products.find(product => product.Barcode === item);
             setProduct(matchedProduct);
-            setProductPrice(matchedProduct.Price)
+            setProductPrice(matchedProduct?.Price)
         }
     }, [products, item]);
 

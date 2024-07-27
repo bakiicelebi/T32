@@ -11,7 +11,7 @@ const ProductCard = memo(
   ({ item, setIsFavoritesDisplay }: any) => {
     const { selectedSale, openTabs } = useSaleContext();
     const { favorites, addFavorite, removeFavorite } = useData();
-    const { addCart1, addCart2, addCart3, addCart4, addCart5, cart1, cart2, cart3, cart4, cart5 } = useCartContext();
+    const { refreshCart, cart1, cart2, cart3, cart4, cart5 } = useCartContext();
     const [loading, setLoading] = useState(false); // Add loading state
 
 
@@ -22,36 +22,29 @@ const ProductCard = memo(
     const handleAdding = () => {
       const cartNo = openTabs[selectedSale - 1];
       let cart;
-      let addCartFunction;
 
       switch (cartNo) {
         case 1:
           cart = cart1;
-          addCartFunction = addCart1;
           break;
         case 2:
           cart = cart2;
-          addCartFunction = addCart2;
           break;
         case 3:
           cart = cart3;
-          addCartFunction = addCart3;
           break;
         case 4:
           cart = cart4;
-          addCartFunction = addCart4;
           break;
         case 5:
           cart = cart5;
-          addCartFunction = addCart5;
           break;
         default:
           return;
       }
 
       if (!cart.some((cartItem: any) => cartItem === item.Barcode)) {
-        addCartFunction(item.Barcode).then(() => console.log(item.ProductName + " added " + cartNo + '. cart'));
-        ;
+        refreshCart(cartNo, [item.Barcode]).then(() => console.log(item.ProductName + " added " + cartNo + '. cart'));
       } else {
         Alert.alert("Error", 'Item is already in the cart');
         console.log('Item is already in the cart');
