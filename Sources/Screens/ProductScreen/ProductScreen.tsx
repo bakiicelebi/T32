@@ -71,8 +71,6 @@ const ProductScreen = () => {
 
 const CategoryProductList = ({ routeKey }: any) => {
 
-
-
     const [data, setData] = useState<any[]>([]);
     const { products } = useData();
     const [loading, setLoading] = useState(true);

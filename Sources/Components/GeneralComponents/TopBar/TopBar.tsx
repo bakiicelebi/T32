@@ -129,12 +129,12 @@ const TopBar = () => {
                         <Text ml={5} fontWeight={"bold"} fontSize={"2xl"}>T32 GROCERY</Text>
                     </HStack>
                     <HStack alignItems={"center"} justifyContent={"flex-end"} pr={22} space={10}>
-                        <Pressable onPress={handleNavigateHome}>
+                        {isDisabled && <Pressable onPress={handleNavigateHome}>
                             <Icon color={colorMode === "dark" ? "#7f8183" : "black"} name='home-outline' size={30} />
-                        </Pressable>
-                        <Pressable disabled={isDisabled} onPress={handleFetch}>
+                        </Pressable>}
+                        {!isDisabled && <Pressable disabled={isDisabled} onPress={handleFetch}>
                             <Icon color={color} name='tray-arrow-down' size={30} />
-                        </Pressable>
+                        </Pressable>}
                         <HStack alignItems={"center"}>
                             <Menu placement='bottom' trigger={triggerProps => {
                                 return <Pressable accessibilityLabel="More options menu" {...triggerProps}>

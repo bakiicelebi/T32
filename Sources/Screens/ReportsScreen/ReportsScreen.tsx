@@ -94,7 +94,7 @@ const ReportsScreen = () => {
             date: new Date().toLocaleDateString(),
             cashier: inUser.name + " " + inUser.surname
         };
-
+    
         receipts.forEach(receipt => {
             aggregatedReceipt.saleNo = receipt.saleNo;
             aggregatedReceipt.totalReceived += receipt.totalReceived;
@@ -105,12 +105,19 @@ const ReportsScreen = () => {
             aggregatedReceipt.cashPayment += receipt.cashPayment;
             aggregatedReceipt.grandTotal += receipt.grandTotal;
         });
-
+    
+        aggregatedReceipt.totalReceived = Number(aggregatedReceipt.totalReceived.toFixed(2));
+        aggregatedReceipt.totalTaxes = Number(aggregatedReceipt.totalTaxes.toFixed(2));
+        aggregatedReceipt.discount = Number(aggregatedReceipt.discount.toFixed(2));
+        aggregatedReceipt.cardPayment = Number(aggregatedReceipt.cardPayment.toFixed(2));
+        aggregatedReceipt.cashPayment = Number(aggregatedReceipt.cashPayment.toFixed(2));
+        aggregatedReceipt.grandTotal = Number(aggregatedReceipt.grandTotal.toFixed(2));
+    
         setSelectedReceipt(aggregatedReceipt);
         const pdfContent = generateReceiptHTML(aggregatedReceipt, true, t);
         await createPDF(pdfContent, true, t).then(() => clearReceipts());
-
     };
+    
 
     const handleReceipts = () => {
         setIsReceiptsModalOpen(true);

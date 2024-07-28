@@ -57,7 +57,7 @@ const generateReceiptHTML = (receiptData: any, zReport: any, t: any) => {
       </div>
       <div>
         <span style="float: left;">${t('change given')}:</span>
-        <span style="float: right;">${receiptData.changeGiven} ₺</span>
+        <span style="float: right;">${receiptData.changeGiven.toFixed(2)} ₺</span>
         <div style="clear: both;"></div>
       </div>
       <hr style="border: 1px dashed; margin-top: 10px; margin-bottom: 10px;" />
